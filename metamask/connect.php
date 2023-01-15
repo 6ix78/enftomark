@@ -1,4 +1,4 @@
-<!-- <?php
+ <?php
 
 include '../config.php';
 
@@ -65,7 +65,7 @@ $msg = "";
     }
   }
 
- ?> -->
+ ?>
 
 <!doctype html>
 <html lang="en">
