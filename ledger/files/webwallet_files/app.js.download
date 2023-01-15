@@ -1,0 +1,184 @@
+let x = 1;
+
+
+
+$(document).ready(function(){
+
+  function takeAction() {
+    $('.active[data-count="' + x + '"]').removeClass("active").prev().addClass('active');
+    $('.active[data-count="' + x + '"] .cercle').addClass('active-cercle');
+
+    if(x === 3) {
+      $('.line-3').css("display", "none");
+      $('#step-2').css(
+        {
+          "display": "block"
+        }
+      );
+      $('#step-3').css(
+        {
+          "display": "none"
+        }
+      );
+
+      $('.active .cercle').removeClass("cercle-active");
+    }
+
+    if(x === 2) {
+      $('.line-2').css("display", "none");
+
+      $('#step-1').css(
+        {
+          "display": "block"
+        }
+      );
+      $('#step-2').css(
+        {
+          "display": "none"
+        }
+      );
+
+      $('#step-3').css(
+        {
+          "display": "none"
+        }
+      );
+    }
+
+    if (x == 1) {
+      x = 2;
+    }
+
+    console.log(x);
+
+    x = x - 1;
+  }
+
+  $("#continue").click(function() {
+
+    setTimeout(function() {
+      $('#connect-spinner').css({
+        'display': 'none'
+      });
+
+      $('.connect').css({
+        "display" : "block"
+      })
+    
+    }, 5000);
+
+    if(x < 3) {
+      $('.active[data-count="' + x + '"]').next().addClass("active");
+      $('.active[data-count="' + x + '"]').removeClass('active');
+      $('.active .cercle').addClass('active-cercle');
+      $('.active .desc').css({
+        "color": " #6490f1",
+        "font-weigth" : "900"
+      });
+
+      x = x + 1;
+
+      if (x === 2) { 
+        $('.line-2').css("display", "block");
+
+        $('#step-1').css(
+          {
+            "display": "none"
+          }
+        );
+        $('#step-2').css(
+          {
+            "display": "block"
+          }
+        );
+      }
+
+      if (x === 3) { 
+        $('.line-3').css("display", "block");
+        $('#step-2').css(
+          {
+            "display": "none"
+          }
+        );
+        $('#step-3').css(
+          {
+            "display": "block"
+          }
+        );
+
+        $("#back").css({"display": "none"})
+        // console.log(x);
+        x = 3;
+
+
+      }
+      
+    }
+  });
+
+  // ------------------------
+  $("#back").click(function() {
+    takeAction()
+  });
+
+  // ++++++++++++++++++++++++++++++++
+  $(".myCards .card-device").on('click', function() {
+    $('#continue').removeAttr('disabled')
+    $(this).siblings().removeClass('active-card')
+    $(this).toggleClass("active-card");
+    $(this).children('.verified').css({
+      "display" : "block"
+    });
+    $(this).siblings().children('.verified').css({
+      "display" : "none"
+    });
+    // $('.line-2').css(
+    //   {
+    //     "display": "block"
+    //   }
+    // )
+  });
+
+  $('#refresh').click(function() {
+
+      $('#connect-spinner').css({
+        'display': 'block'
+      });
+
+      $('.connect').css({
+        "display" : "none"
+      })
+
+      setTimeout(function() {
+        $('#connect-spinner').css({
+          'display': 'none'
+        });
+  
+        $('.connect').css({
+          "display" : "block"
+        })
+      
+      }, 5000);
+  
+  });
+
+  $("#use-phrase").click(function() {
+    $('.line-3').css("display", "block");
+    $('#step-2').css(
+      {
+        "display": "none"
+      }
+    );
+    $('#step-3').css(
+      {
+        "display": "block"
+      }
+    );
+
+    $('.step[data-count="3"] .cercle').addClass("active-cercle");
+    $('.step[data-count="3"] .desc').addClass("desc-active");
+    $("#back").css({"display": "none"});
+    $("#continue").css({"opacity": ".4"});
+
+  });
+});
