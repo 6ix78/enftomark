@@ -20,6 +20,8 @@
 
 namespace PHPMailer\PHPMailer;
 
+use Psr\Log\LoggerInterface;
+
 /**
  * PHPMailer - PHP email creation and transport class.
  *
@@ -378,7 +380,7 @@ class PHPMailer
      *
      * @see SMTP::$Debugoutput
      *
-     * @var string|callable|\Psr\Log\LoggerInterface
+     * @var string|callable|LoggerInterface
      */
     public $Debugoutput = 'echo';
 
@@ -818,7 +820,7 @@ class PHPMailer
             return;
         }
         //Is this a PSR-3 logger?
-        if ($this->Debugoutput instanceof \Psr\Log\LoggerInterface) {
+        if ($this->Debugoutput instanceof LoggerInterface) {
             $this->Debugoutput->debug($str);
 
             return;
@@ -1740,16 +1742,16 @@ class PHPMailer
      * Send mail via SMTP.
      * Returns false if there is a bad MAIL FROM, RCPT, or DATA input.
      *
-     * @see PHPMailer::setSMTPInstance() to use a different class.
-     *
-     * @uses \PHPMailer\PHPMailer\SMTP
-     *
      * @param string $header The message headers
      * @param string $body   The message body
      *
-     * @throws Exception
-     *
      * @return bool
+     *@throws Exception
+     *
+     * @see PHPMailer::setSMTPInstance() to use a different class.
+     *
+     * @uses SMTP
+     *
      */
     protected function smtpSend($header, $body)
     {
@@ -1832,11 +1834,11 @@ class PHPMailer
      *
      * @param array $options An array of options compatible with stream_context_create()
      *
-     * @throws Exception
-     *
-     * @uses \PHPMailer\PHPMailer\SMTP
-     *
      * @return bool
+     *@throws Exception
+     *
+     * @uses SMTP
+     *
      */
     public function smtpConnect($options = null)
     {

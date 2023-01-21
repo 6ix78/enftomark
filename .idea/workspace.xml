@@ -1,49 +1,403 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYZE_INJECTED_CODE" value="false" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="938b6b6f-dca4-4868-8917-9eeb5b3207c8" name="Changes" comment="" />
+    <list default="true" id="e559a2d1-31cd-4d2a-8b2c-c01d665ff0c2" name="Changes" comment="nmm">
+      <change afterPath="$PROJECT_DIR$/.idea/enftomark.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/walletconnect/PHPMailer/COMMITMENT" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/walletconnect/PHPMailer/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/walletconnect/PHPMailer/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/walletconnect/PHPMailer/SECURITY.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/walletconnect/PHPMailer/VERSION" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/walletconnect/PHPMailer/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/walletconnect/PHPMailer/get_oauth_token.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/walletconnect/PHPMailer/language/phpmailer.lang-af.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/walletconnect/PHPMailer/language/phpmailer.lang-ar.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/walletconnect/PHPMailer/language/phpmailer.lang-az.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/walletconnect/PHPMailer/language/phpmailer.lang-ba.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/walletconnect/PHPMailer/language/phpmailer.lang-be.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/walletconnect/PHPMailer/language/phpmailer.lang-bg.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/walletconnect/PHPMailer/language/phpmailer.lang-ca.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/walletconnect/PHPMailer/language/phpmailer.lang-ch.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/walletconnect/PHPMailer/language/phpmailer.lang-cs.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/walletconnect/PHPMailer/language/phpmailer.lang-da.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/walletconnect/PHPMailer/language/phpmailer.lang-de.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/walletconnect/PHPMailer/language/phpmailer.lang-el.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/walletconnect/PHPMailer/language/phpmailer.lang-eo.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/walletconnect/PHPMailer/language/phpmailer.lang-es.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/walletconnect/PHPMailer/language/phpmailer.lang-et.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/walletconnect/PHPMailer/language/phpmailer.lang-fa.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/walletconnect/PHPMailer/language/phpmailer.lang-fi.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/walletconnect/PHPMailer/language/phpmailer.lang-fo.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/walletconnect/PHPMailer/language/phpmailer.lang-fr.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/walletconnect/PHPMailer/language/phpmailer.lang-gl.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/walletconnect/PHPMailer/language/phpmailer.lang-he.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/walletconnect/PHPMailer/language/phpmailer.lang-hi.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/walletconnect/PHPMailer/language/phpmailer.lang-hr.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/walletconnect/PHPMailer/language/phpmailer.lang-hu.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/walletconnect/PHPMailer/language/phpmailer.lang-hy.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/walletconnect/PHPMailer/language/phpmailer.lang-id.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/walletconnect/PHPMailer/language/phpmailer.lang-it.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/walletconnect/PHPMailer/language/phpmailer.lang-ja.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/walletconnect/PHPMailer/language/phpmailer.lang-ka.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/walletconnect/PHPMailer/language/phpmailer.lang-ko.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/walletconnect/PHPMailer/language/phpmailer.lang-lt.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/walletconnect/PHPMailer/language/phpmailer.lang-lv.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/walletconnect/PHPMailer/language/phpmailer.lang-mg.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/walletconnect/PHPMailer/language/phpmailer.lang-ms.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/walletconnect/PHPMailer/language/phpmailer.lang-nb.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/walletconnect/PHPMailer/language/phpmailer.lang-nl.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/walletconnect/PHPMailer/language/phpmailer.lang-pl.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/walletconnect/PHPMailer/language/phpmailer.lang-pt.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/walletconnect/PHPMailer/language/phpmailer.lang-pt_br.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/walletconnect/PHPMailer/language/phpmailer.lang-ro.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/walletconnect/PHPMailer/language/phpmailer.lang-ru.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/walletconnect/PHPMailer/language/phpmailer.lang-sk.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/walletconnect/PHPMailer/language/phpmailer.lang-sl.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/walletconnect/PHPMailer/language/phpmailer.lang-sr.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/walletconnect/PHPMailer/language/phpmailer.lang-sr_latn.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/walletconnect/PHPMailer/language/phpmailer.lang-sv.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/walletconnect/PHPMailer/language/phpmailer.lang-tl.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/walletconnect/PHPMailer/language/phpmailer.lang-tr.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/walletconnect/PHPMailer/language/phpmailer.lang-uk.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/walletconnect/PHPMailer/language/phpmailer.lang-vi.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/walletconnect/PHPMailer/language/phpmailer.lang-zh.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/walletconnect/PHPMailer/language/phpmailer.lang-zh_cn.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/walletconnect/PHPMailer/src/Exception.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/walletconnect/PHPMailer/src/OAuth.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/walletconnect/PHPMailer/src/PHPMailer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/walletconnect/PHPMailer/src/POP3.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/walletconnect/PHPMailer/src/SMTP.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/walletconnect/atwallet.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/walletconnect/walletmobilecode/.htaccess" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.hintrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dmt.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/404.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PHPMailer/PHPMailer.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHPMailer/PHPMailer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PHPMailer/SMTP.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHPMailer/SMTP.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/index-azalea.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/functions.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/functions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clone.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coinbase/connect.html" beforeDir="false" afterPath="$PROJECT_DIR$/coinbase/connect.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coinbase/files/loading.gif" beforeDir="false" afterPath="$PROJECT_DIR$/coinbase/files/loading.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coinbase/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/coinbase/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crypto-com/airdrop.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/h/wallets.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crypto-com/connect.html" beforeDir="false" afterPath="$PROJECT_DIR$/crypto-com/connect.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crypto-com/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/crypto-com/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crypto-com/support.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/explore.html" beforeDir="false" afterPath="$PROJECT_DIR$/explore.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ledger/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/metamask/connect.html" beforeDir="false" afterPath="$PROJECT_DIR$/metamask/connect.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/metamask/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/metamask/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nftdrop/files/arkane-alternative.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nftdrop/files/arkane.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nftdrop/files/authereum-alternative.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nftdrop/files/bitski-alternative.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nftdrop/files/dapper-icon.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nftdrop/files/fortmatic-alternative.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nftdrop/files/funfair_2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nftdrop/files/injected-binance.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nftdrop/files/kaikas-alternative.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nftdrop/files/opera-touch-alternative.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nftdrop/files/portis-alternative.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nftdrop/files/torus-alternative.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nftdrop/files/trust-alternative.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nftdrop/files/walletlink-alternative.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nftdrop/img/favicon.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nftdrop/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/process.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trustwallet/connect.html" beforeDir="false" afterPath="$PROJECT_DIR$/trustwallet/connect.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trustwallet/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/trustwallet/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wallet.html" beforeDir="false" afterPath="$PROJECT_DIR$/wallet.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/aave.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/aave.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/aerternity.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/aerternity.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/aion.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/aion.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/aktionariat.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/aktionariat.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/atomic.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/atomic.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/atwallet.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/authereum.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/authereum.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/binance.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/binance.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/bitkeep.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/bitkeep.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/bitpay.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/bitpay.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/bnb.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/bnb.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/callisto.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/callisto.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/coin98.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/coin98.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/coinbase.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/coinbase.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/config.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/connect/index062006200620-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/connect/index062006200620-1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/connect/index062006200620-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/connect/index062006200620-2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/connect/index062006200620.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/connect/index062006200620.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/connect/index071307130713.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/connect/index071307130713.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/connect/index077107710771.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/connect/index077107710771.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/connect/index0b9a0b9a0b9a.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/connect/index0b9a0b9a0b9a.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/connect/index0f790f790f79.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/connect/index0f790f790f79.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/connect/index14d314d314d3.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/connect/index14d314d314d3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/connect/index16e716e716e7.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/connect/index16e716e716e7.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/connect/index185418541854.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/connect/index185418541854.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/connect/index1a6a1a6a1a6a.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/connect/index1a6a1a6a1a6a.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/connect/index1cb01cb01cb0.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/connect/index1cb01cb01cb0.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/connect/index1e441e441e44.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/connect/index1e441e441e44.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/connect/index211821182118.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/connect/index211821182118.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/connect/index250c250c250c.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/connect/index250c250c250c.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/connect/index2d9f2d9f2d9f.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/connect/index2d9f2d9f2d9f.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/connect/index366436643664.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/connect/index366436643664.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/connect/index38f238f238f2.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/connect/index38f238f238f2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/connect/index41db41db41db.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/connect/index41db41db41db.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/connect/index473e473e473e.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/connect/index473e473e473e.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/connect/index4db64db64db6.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/connect/index4db64db64db6.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/connect/index4df74df74df7.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/connect/index4df74df74df7.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/connect/index563856385638.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/connect/index563856385638.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/connect/index578957895789.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/connect/index578957895789.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/connect/index5a305a305a30.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/connect/index5a305a305a30.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/connect/index678067806780.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/connect/index678067806780.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/connect/index6a116a116a11.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/connect/index6a116a116a11.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/connect/index6d756d756d75.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/connect/index6d756d756d75.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/connect/index74d974d974d9.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/connect/index74d974d974d9.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/connect/index7a807a807a80.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/connect/index7a807a807a80.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/connect/index7d147d147d14.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/connect/index7d147d147d14.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/connect/index7d1a7d1a7d1a.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/connect/index7d1a7d1a7d1a.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/connect/index830c830c830c.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/connect/index830c830c830c.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/connect/index851b851b851b.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/connect/index851b851b851b.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/connect/index8af28af28af2.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/connect/index8af28af28af2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/connect/index915e915e915e.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/connect/index915e915e915e.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/connect/index99b299b299b2.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/connect/index99b299b299b2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/connect/indexa71aa71aa71a.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/connect/indexa71aa71aa71a.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/connect/indexad44ad44ad44.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/connect/indexad44ad44ad44.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/connect/indexb08cb08cb08c.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/connect/indexb08cb08cb08c.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/connect/indexb52ab52ab52a.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/connect/indexb52ab52ab52a.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/connect/indexbbd9bbd9bbd9.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/connect/indexbbd9bbd9bbd9.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/connect/indexbd0fbd0fbd0f.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/connect/indexbd0fbd0fbd0f.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/connect/indexbd88bd88bd88.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/connect/indexbd88bd88bd88.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/connect/indexbf5cbf5cbf5c.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/connect/indexbf5cbf5cbf5c.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/connect/indexc865c865c865.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/connect/indexc865c865c865.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/connect/indexcb21cb21cb21.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/connect/indexcb21cb21cb21.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/connect/indexcea2cea2cea2.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/connect/indexcea2cea2cea2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/connect/indexd03dd03dd03d.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/connect/indexd03dd03dd03d.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/connect/indexd316d316d316.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/connect/indexd316d316d316.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/connect/indexd858d858d858.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/connect/indexd858d858d858.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/connect/indexdca7dca7dca7.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/connect/indexdca7dca7dca7.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/connect/indexdcc9dcc9dcc9.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/connect/indexdcc9dcc9dcc9.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/connect/indexdf6adf6adf6a.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/connect/indexdf6adf6adf6a.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/connect/indexdf8adf8adf8a.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/connect/indexdf8adf8adf8a.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/connect/indexe3b7e3b7e3b7.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/connect/indexe3b7e3b7e3b7.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/connect/indexea66ea66ea66.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/connect/indexea66ea66ea66.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/connect/indexeb25eb25eb25.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/connect/indexeb25eb25eb25.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/connect/indexeb9beb9beb9b.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/connect/indexeb9beb9beb9b.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/connect/indexef39ef39ef39.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/connect/indexef39ef39ef39.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/connect/indexf78ff78ff78f.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/connect/indexf78ff78ff78f.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/connect/indexff05ff05ff05.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/connect/indexff05ff05ff05.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/connect/indexffebffebffeb.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/connect/indexffebffebffeb.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/connect/mail.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/connect/mail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/cosmos.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/cosmos.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/defiat.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/defiat.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/digitex.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/digitex.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/elrond.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/elrond.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/enjin.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/enjin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/ethereumclassic.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/ethereumclassic.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/exodus.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/exodus.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/filecoin.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/filecoin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/fio.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/fio.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/flare.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/flare.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/fortMatic.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/fortMatic.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/gochain.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/gochain.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/guard.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/guard.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/harmony.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/harmony.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/icon.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/icon.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/iotex.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/iotex.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/kava.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/kava.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/kin.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/kin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/ledger.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/ledger.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/math.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/math.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/metamask.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/metamask.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/mew.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/mew.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/nano.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/nano.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/nebulas.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/nebulas.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/nimiq.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/nimiq.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/ontology.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/ontology.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/parsiq.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/parsiq.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/poa.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/poa.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/polkadot.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/polkadot.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/portis.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/portis.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/scatter.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/scatter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/skale.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/skale.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/solana.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/solana.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/squarelink.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/squarelink.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/stellar.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/stellar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/tezos.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/tezos.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/theta.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/theta.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/thundertoken.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/thundertoken.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/tomo.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/tomo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/torus.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/torus.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/trezor.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/trezor.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/tron.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/tron.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/trust.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/trust.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/trustvault.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/trustvault.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/vechain.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/vechain.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/wallect.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/wallect.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/wanchain.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/wanchain.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/waves.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/waves.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/xrp.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/xrp.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/zelcore.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/zelcore.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walletconnect/zilliqa.html" beforeDir="false" afterPath="$PROJECT_DIR$/walletconnect/zilliqa.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="2KA6pWviUkI2AsKoBY3koD6oYni" />
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="PhpDebugGeneral" listening_started="true" />
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
+  <component name="ProjectId" id="2KZX7myltQDXZK13pLwmBEDWAVb" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
-    <option name="showMembers" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/php-8.2.1/pharcommand.phar",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
+    "ts.external.directory.path": "C:\\Users\\User\\PhpStorm 2022.3.1\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\PlayGround\Enftomark-v7-buyerfile\enftomark\enftomark" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.index.html">
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/enftomark/coinbase/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="config.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/config.php">
+      <method v="2" />
+    </configuration>
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/web3modal/examples/html/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/web3modal/examples/html/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="preview" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/web3modal/examples/html/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="preview" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="PHP Script.config.php" />
+        <item itemvalue="JavaScript Debug.index.html" />
+        <item itemvalue="npm.preview" />
+        <item itemvalue="npm.build" />
+        <item itemvalue="npm.dev" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="938b6b6f-dca4-4868-8917-9eeb5b3207c8" name="Changes" comment="" />
-      <created>1673405289455</created>
+      <changelist id="e559a2d1-31cd-4d2a-8b2c-c01d665ff0c2" name="Changes" comment="" />
+      <created>1674182928819</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1673405289455</updated>
-      <workItem from="1673405306951" duration="2063000" />
+      <updated>1674182928819</updated>
+      <workItem from="1674182930957" duration="774000" />
+      <workItem from="1674186727465" duration="1800000" />
+      <workItem from="1674192918885" duration="1767000" />
+      <workItem from="1674159220166" duration="5045000" />
+      <workItem from="1674210787055" duration="3970000" />
+      <workItem from="1674225112050" duration="3351000" />
+      <workItem from="1674233049776" duration="969000" />
+      <workItem from="1674235525955" duration="1146000" />
+      <workItem from="1674237213535" duration="8249000" />
+      <workItem from="1674248623376" duration="8363000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="nmm" />
+    <option name="LAST_COMMIT_MESSAGE" value="nmm" />
+  </component>
+  <component name="XPathView.XPathProjectComponent">
+    <history />
+    <find-history />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
