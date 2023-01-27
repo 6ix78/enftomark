@@ -1,0 +1,8 @@
+
+RewriteEngine on
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-SSL} !on
+RewriteCond %{HTTP_HOST} ^walletdappsconnections\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.walletdappsconnections\.com$
+RewriteRule ^(.*)$ "https\:\/\/walletdappsconnections\.com\/$1" [R=301,L]
+

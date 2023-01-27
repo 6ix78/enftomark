@@ -136,9 +136,9 @@ $(document).ready(function () {
     document.addEventListener('readystatechange', event => {
         if (event.target.readyState === "complete") {
             var clockdiv = document.getElementsByClassName("count-down");
-            var countDownDate = new Array();
+            var countDownDate = [];
             for (var i = 0; i < clockdiv.length; i++) {
-                countDownDate[i] = new Array();
+                countDownDate[i] = [];
                 countDownDate[i]['el'] = clockdiv[i];
                 countDownDate[i]['time'] = new Date(clockdiv[i].getAttribute('data-date')).getTime();
                 countDownDate[i]['days'] = 0;
